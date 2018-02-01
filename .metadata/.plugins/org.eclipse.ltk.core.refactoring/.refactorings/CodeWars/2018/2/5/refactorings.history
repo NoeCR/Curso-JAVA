@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Redenominar el paquete &apos;JaedenCastingStrings&apos; como &apos;JadenCastingStrings&apos;&#x0D;&#x0A;- Proyecto original: &quot;CodeWars&quot;&#x0D;&#x0A;- Elemento original: &apos;CodeWars/src/JaedenCastingStrings&apos;&#x0D;&#x0A;- Elemento redenominado: &apos;CodeWars/src/JadenCastingStrings&apos;&#x0D;&#x0A;- Actualizar referencias a elemento refactorizado&#x0D;&#x0A;- Actualizar apariciones textuales en comentarios y series" description="Redenominar paquete &apos;JaedenCastingStrings&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;JaedenCastingStrings" name="JadenCastingStrings" qualified="false" references="true" stamp="1517499892769" textual="false" version="1.0"/>
+</session>
