@@ -15,18 +15,13 @@ import java.util.ArrayList;
  */
 public class NewsFeed
 {
-    private ArrayList<MessagePost> messages;
-    private ArrayList<PhotoPost> photos;
-    private ArrayList<AudioPost> audios;
-
+    private ArrayList<Post> post;
     /**
      * Construct an empty news feed.
      */
     public NewsFeed()
     {
-        messages = new ArrayList<>();
-        photos = new ArrayList<>();
-        audios = new ArrayList<>();
+        post = new ArrayList<>();
     }
 
     /**
@@ -36,7 +31,7 @@ public class NewsFeed
      */
     public void addMessagePost(MessagePost message)
     {
-        messages.add(message);
+        post.add(message);
     }
 
     /**
@@ -46,7 +41,7 @@ public class NewsFeed
      */
     public void addPhotoPost(PhotoPost photo)
     {
-        photos.add(photo);
+        post.add(photo);
     }
 
      /**
@@ -56,7 +51,7 @@ public class NewsFeed
      */
     public void addAudioPost(AudioPost audio)
     {
-       audios.add(audio);
+       post.add(audio);
     }
     /**
      * Show the news feed. Currently: print the news feed details to the
@@ -64,6 +59,10 @@ public class NewsFeed
      */
     public void show()
     {
+        for(Post message : post){
+            message.toString()  .display();
+            System.out.println(); 
+        }
         // display all text posts
         for(MessagePost message : messages) {
             message.display();
