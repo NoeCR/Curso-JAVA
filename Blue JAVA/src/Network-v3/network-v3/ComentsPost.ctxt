@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ComentsPost
+comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ FeedBack\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment1.params=author
+comment1.target=ComentsPost(java.lang.String)
+comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ FeedBack\n
+comment2.params=
+comment2.target=void\ like()
+comment2.text=\n\ Record\ one\ more\ 'Like'\ indication\ from\ a\ user.\n
+comment3.params=
+comment3.target=void\ unlike()
+comment3.text=\n\ Record\ that\ a\ user\ has\ withdrawn\ his/her\ 'Like'\ vote.\n
+comment4.params=text
+comment4.target=void\ addComment(java.lang.String)
+comment4.text=\n\ Add\ a\ comment\ to\ this\ post.\n\ \n\ @param\ text\ \ The\ new\ comment\ to\ add.\n
+comment5.params=
+comment5.target=void\ display()
+comment5.text=\n\ Display\ the\ details\ of\ this\ post.\n\ \n\ (Currently\:\ Print\ to\ the\ text\ terminal.\ This\ is\ simulating\ display\ \n\ in\ a\ web\ browser\ for\ now.)\n
+numComments=6

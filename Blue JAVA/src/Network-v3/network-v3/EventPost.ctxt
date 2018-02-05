@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=EventPost
+comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Eventos\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment1.params=author\ text
+comment1.target=EventPost(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MessagePost.\n\ \n\ @param\ author\ \ \ \ The\ username\ of\ the\ author\ of\ this\ post.\n\ @param\ text\ \ \ \ \ \ The\ text\ of\ this\ post.\n
+comment2.params=
+comment2.target=java.lang.String\ getEvent()
+comment2.text=\n\ Return\ the\ text\ of\ this\ post.\n\ \n\ @return\ The\ post's\ message\ text.\n
+comment3.params=
+comment3.target=void\ printShortSummary()
+comment3.text=\n\ Este\ metodo\ imprime\ el\ nombre\ del\ autor\ del\ post\n
+numComments=4
