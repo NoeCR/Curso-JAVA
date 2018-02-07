@@ -1,6 +1,4 @@
- 
-
- 
+package Sofgest; 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,13 +12,9 @@ import org.apache.poi.ss.usermodel.Cell;
 
 
 
-public class ImportClients {
+public class Import {
 
-	
-	
-	
-
-public static  ArrayList<List> getClientes() throws IOException{
+public static List getClientes() throws IOException{
 	String filename = "libro.xls";
 	List sheetData = new ArrayList();
 	FileInputStream fis = null;
@@ -48,7 +42,7 @@ public static  ArrayList<List> getClientes() throws IOException{
 				fis.close();
 			}
 		}
-		return (ArrayList<List>) sheetData;
+		return  sheetData;
 	
 	}
 }

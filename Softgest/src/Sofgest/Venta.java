@@ -24,8 +24,9 @@ public class Venta {
 	 */
 	public void display()
 	{
-		System.out.println(cliente.getNombre());
-		System.out.print(art.getNombre());
+		System.out.println("Nombre de cliente. " +cliente.getNombre());
+		System.out.print("Nombre de articulo. " +art.getNombre());
+		System.out.print("Cantidad: " + cuantos);
 
 	}
 	public Clientes getCliente() {
