@@ -1,3 +1,7 @@
+package Sofgest;
+
+
+import java.util.Calendar;
 import java.util.ArrayList;
 
 /**
@@ -8,12 +12,29 @@ import java.util.ArrayList;
  */
 public class Historico {
 
-    private ArrayList<Venta> ventas;
-    /**
-     * Mètode constructor per a objectes de la classe Historico
-     */
-    public Historico() {
-        this.ventas = new ArrayList<>();
-    }
-
+	private Calendar fecha;
+	private ArrayList<Venta> ventas;
+	/**
+	 * Mètode constructor per a objectes de la classe Historico
+	 */
+	public Historico() {
+		this.ventas = new ArrayList<>();
+		this.fecha = Calendar.getInstance();
+	}
+	@Override
+	public String toString() {
+		return "Historico [fecha=" + fecha + ", ventas=" + ventas + "]";
+	}
+	public Calendar getFecha() {
+		return fecha;
+	}
+	public void setFecha(Calendar fecha) {
+		this.fecha = fecha;
+	}
+	public ArrayList<Venta> getVentas() {
+		return ventas;
+	}
+	public void setVentas(ArrayList<Venta> ventas) {
+		this.ventas = ventas;
+	}
 }

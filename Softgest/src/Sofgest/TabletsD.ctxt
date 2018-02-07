@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=TabletsD
-comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ TabletsD\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment0.text=\r\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ TabletsD\r\n\ \r\n\ @author\ (el\ vostre\ nom)\ \r\n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\r\n
 comment1.params=nombre\ precio\ dimensiones\ peso\ marca\ tipo\ botones\ conexion\ distancia\ pen\ multi\ area\ presion
 comment1.target=TabletsD(java.lang.String,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ double,\ boolean,\ boolean,\ double,\ int)
-comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ TabletsD\n
+comment1.text=\r\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ TabletsD\r\n
 numComments=2

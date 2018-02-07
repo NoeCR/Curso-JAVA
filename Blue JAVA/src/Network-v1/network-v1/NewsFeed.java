@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Iterator;
 /**
  * The NewsFeed class stores news posts for the news feed in a social network 
  * application.
@@ -15,13 +15,17 @@ import java.util.ArrayList;
  */
 public class NewsFeed
 {
-    private ArrayList<Post> post;
+    private ArrayList<MessagePost> messages;
+    private ArrayList<PhotoPost> photos;
+    private ArrayList<AudioPost> audios;
     /**
      * Construct an empty news feed.
      */
     public NewsFeed()
     {
-        post = new ArrayList<>();
+        messages = new ArrayList<>();
+        photos = new ArrayList<>();
+        audios = new ArrayList<>();
     }
 
     /**
@@ -31,7 +35,7 @@ public class NewsFeed
      */
     public void addMessagePost(MessagePost message)
     {
-        post.add(message);
+        messages.add(message);
     }
 
     /**
@@ -41,7 +45,7 @@ public class NewsFeed
      */
     public void addPhotoPost(PhotoPost photo)
     {
-        post.add(photo);
+        photos.add(photo);
     }
 
      /**
@@ -51,24 +55,19 @@ public class NewsFeed
      */
     public void addAudioPost(AudioPost audio)
     {
-       post.add(audio);
+       audios.add(audio);
     }
     /**
      * Show the news feed. Currently: print the news feed details to the
      * terminal. (To do: replace this later with display in web browser.)
      */
     public void show()
-    {
-        for(Post message : post){
-            message.toString()  .display();
-            System.out.println(); 
-        }
+    {       
         // display all text posts
         for(MessagePost message : messages) {
             message.display();
             System.out.println();   // empty line between posts
         }
-
         // display all photos
         for(PhotoPost photo : photos) {
             photo.display();

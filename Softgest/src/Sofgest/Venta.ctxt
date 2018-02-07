@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Venta
-comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Venta\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment0.text=\r\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Venta\r\n\ \r\n\ @author\ (el\ vostre\ nom)\ \r\n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\r\n
 comment1.params=cliente\ articulo\ cuantos
 comment1.target=Venta(Clientes,\ Articulo,\ int)
-comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Venta\n
+comment1.text=\r\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Venta\r\n
 comment2.params=
 comment2.target=void\ display()
-comment2.text=\n\ Metodo\ para\ mostrar\ el\ nombre\ y\ apellidos\ del\ cliente,\ el\ nombre\ y\ precio\ del\ articulo,\ la\ cantidad\ vendida\ y\ la\ fecha\ de\ venta.\n
+comment2.text=\r\n\ Metodo\ para\ mostrar\ el\ nombre\ y\ apellidos\ del\ cliente,\ el\ nombre\ y\ precio\ del\ articulo,\ la\ cantidad\ vendida\ y\ la\ fecha\ de\ venta.\r\n
 numComments=3

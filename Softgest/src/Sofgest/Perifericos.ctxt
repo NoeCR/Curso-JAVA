@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Perifericos
-comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Perifericos\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment0.text=\r\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Perifericos\r\n\ \r\n\ @author\ (el\ vostre\ nom)\ \r\n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\r\n
 comment1.params=nombre\ precio\ dimensiones\ peso\ marca\ tipo\ botones\ conexion\ distancia
 comment1.target=Perifericos(java.lang.String,\ double,\ double,\ double,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ double)
-comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Perifericos\n
+comment1.text=\r\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Perifericos\r\n
 numComments=2

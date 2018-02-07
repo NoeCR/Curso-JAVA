@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class AudioPost extends Post
 {
     private String audioname;  // the name of the image file
-    private int duration;   // a one line image caption
+    private double duration;   // a one line image caption
     /**
      * Constructor for objects of class PhotoPost.
      * 
@@ -41,7 +41,7 @@ public class AudioPost extends Post
      * 
      * @return The image's caption.
      */
-    public int getDuration()
+    public double getDuration()
     {
         return duration;
     }

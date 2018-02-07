@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=Clientes
-comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Clientes\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment0.text=\r\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Clientes\r\n\ \r\n\ @author\ (el\ vostre\ nom)\ \r\n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\r\n
 comment1.params=nombre\ apellidos\ dni\ mail\ edad
 comment1.target=Clientes(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
-comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Clientes\n
-numComments=2
+comment1.text=\r\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Clientes\r\n
+comment2.params=
+comment2.target=Clientes()
+numComments=3

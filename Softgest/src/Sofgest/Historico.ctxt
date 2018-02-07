@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Historico
-comment0.text=\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Historico\n\ \n\ @author\ (el\ vostre\ nom)\ \n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\n
+comment0.text=\r\n\ Escriviu\ aqu\u00ED\ una\ descripc\u00EC\u00F3\ de\ la\ classe\ Historico\r\n\ \r\n\ @author\ (el\ vostre\ nom)\ \r\n\ @version\ (un\ n\u00FAmero\ de\ versi\u00F3\ o\ la\ data)\r\n
 comment1.params=
 comment1.target=Historico()
-comment1.text=\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Historico\n
+comment1.text=\r\n\ M\u00E8tode\ constructor\ per\ a\ objectes\ de\ la\ classe\ Historico\r\n
 numComments=2
