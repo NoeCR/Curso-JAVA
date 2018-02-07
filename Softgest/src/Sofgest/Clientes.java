@@ -28,7 +28,7 @@ public class Clientes {
     /**
      * Mètode constructor per a objectes de la classe Clientes
      */
-    public Clientes(RichTextString nombre,RichTextString apellidos, RichTextString dni, RichTextString mail, double edad, double telefono) {
+    public Clientes(RichTextString nombre,RichTextString apellidos,  RichTextString mail, double edad, RichTextString dni,double telefono) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.mail = mail;
@@ -37,31 +37,33 @@ public class Clientes {
         this.telefono = telefono;
     }
     public Clientes() throws IOException {
-    	List sheetData = Import.getClientes();
-    	for (int i = 1; i < sheetData.size(); i++) {
-			List list = (List) sheetData.get(i);
-			for (int j = 0; j < list.size(); j++) {
-				Cell cell = (Cell) list.get(j);
-				if(j == 0) {
-					this.nombre = cell.getRichStringCellValue();
-				}else if(j ==1) {
-					this.apellidos = cell.getRichStringCellValue();
-				}else if(j ==2) {
-					this.mail = cell.getRichStringCellValue();
-				}else if(j ==3) {
-					this.edad = cell.getNumericCellValue();
-				}else if(j ==4) {
-					this.dni = cell.getRichStringCellValue();
-				}else if(j ==5) {
-					System.out.println("Telefono: " + cell.getNumericCellValue());
-				}				
-			}			
-		}
-    
+     Clientes cli;
+     List sheetData = Import.getClientes();
+     for (int i = 1; i < sheetData.size(); i++) {
+         List list = (List) sheetData.get(i);            
+         for (int j = 0; j < list.size(); j++) {
+             Cell cell = (Cell) list.get(j);
+             if(j == 0) {
+                 nombre = cell.getRichStringCellValue();
+             }else if(j ==1) {                   
+                 apellidos = cell.getRichStringCellValue();
+             }else if(j ==2) {
+                 mail = cell.getRichStringCellValue();
+             }else if(j ==3) {
+                 edad = cell.getNumericCellValue();
+             }else if(j ==4) {
+                  dni = cell.getRichStringCellValue();
+             }else if(j ==5) {
+                telefono = cell.getNumericCellValue();
+             }  
+             cli = new Clientes(nombre, apellidos, mail, edad, dni, telefono);
+             //cli = null;
+         }        
+       }
+     
     }
 
-
-    @Override
+	@Override
 	public String toString() {
 		return "Clientes [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", mail=" + mail + ", edad="
 				+ edad + ", telefono=" + telefono + "]";
@@ -75,7 +77,7 @@ public class Clientes {
 	public RichTextString getApellidos() {
 		return apellidos;
 	}
-	public void setApellidos(RichTextString apellidos) {
+	public void setApellidos(RichTextString apellidos){
 		this.apellidos = apellidos;
 	}
 	public RichTextString getDni() {
@@ -102,16 +104,4 @@ public class Clientes {
 	public void setTelefono(double telefono) {
 		this.edad = telefono;
 	}
-
 }
- 
-/*
- *     	ArrayList<List> clientes = new ArrayList<List>();
-    	//clientes.add(getClientes());
-    	clientes.add(Import.getClientes());
-    	for(List cliente : clientes) {
-    		System.out.println(cliente);
-    	}
-  */
- 
-

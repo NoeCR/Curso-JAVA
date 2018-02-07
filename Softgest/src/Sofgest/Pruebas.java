@@ -31,45 +31,9 @@ public class Pruebas {
 						System.out.println("DNI: " + cell.getRichStringCellValue());
 					}else if(j ==5) {
 						System.out.println("Telefono: " + cell.getNumericCellValue());
-					}
-				
-					
+					}									
 				}
 				System.out.println("");
 			}
 		}		
 }
-
-	
-	/*
-	 * if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-						System.out.print(cell.getNumericCellValue());
-					} else if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
-						System.out.print(cell.getRichStringCellValue());
-					} else if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
-						System.out.print(cell.getBooleanCellValue());
-					}
-					if (j < list.size() - 1) {
-						System.out.print(", ");
-					}
-	 * 
-	 * 
-	
-	//System.out.println(Import.getClientes());
-			ArrayList<List> clientes = new ArrayList<>();
-			clientes.add(Import.getClientes());
-			System.out.println(clientes);
-			Iterator<List> it = clientes.iterator();
-			 while(it.hasNext()) {
-				 List item = it.next();
-				 if(item != null) {
-					 System.out.println(item);
-				 }
-			 }
-			 for(List cliente : clientes) {
-				 System.out.println(cliente);
-			 }
-			
-		}
-	
-	*/ 
