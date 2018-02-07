@@ -1,4 +1,4 @@
-package Sofgest;
+ 
 
 public class Panel {
 
