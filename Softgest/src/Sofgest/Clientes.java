@@ -24,6 +24,12 @@ public class Clientes {
     private double edad; 
     private double telefono;
        
+    private String nom;
+    private String ape;
+    private String dn;
+    private String ma;
+    private double anio;
+    private double telf;
         
     /**
      * Mètode constructor per a objectes de la classe Clientes
@@ -36,9 +42,18 @@ public class Clientes {
         this.dni = dni;  
         this.telefono = telefono;
     }
+    public Clientes(String nom, String ape, String dn, String ma, double anio,  double telf) {
+    	this.nom = nom;
+        this.ape = ape;
+        this.dn = dn;
+        this.ma = ma;
+        this.anio = anio;  
+        this.telf = telf;
+    }
     public Clientes() throws IOException {
-     Clientes cli;
-     List sheetData = Import.getClientes();
+     //Clientes cli;
+    	List sheetData = Import.getClientes();
+    	Clientes arrayObjetos[]=new Clientes[sheetData.size()];     
      for (int i = 1; i < sheetData.size(); i++) {
          List list = (List) sheetData.get(i);            
          for (int j = 0; j < list.size(); j++) {
@@ -56,9 +71,11 @@ public class Clientes {
              }else if(j ==5) {
                 telefono = cell.getNumericCellValue();
              }  
-             cli = new Clientes(nombre, apellidos, mail, edad, dni, telefono);
+             //cln[i-1] = new Clientes(nombre, apellidos, mail, edad, dni, telefono);
              //cli = null;
-         }        
+         } 
+         arrayObjetos[i-1]= new Clientes(nombre, apellidos , mail , edad , dni , telefono);
+         
        }
      
     }

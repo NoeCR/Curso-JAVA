@@ -6,4 +6,7 @@
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Sofgest.ImportClients"/>
+<fullyQualifiedTypeName name="Sofgest.Import"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
 </qualifiedTypeNameHistroy>
