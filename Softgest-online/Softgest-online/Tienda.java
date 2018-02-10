@@ -33,13 +33,20 @@ public class Tienda{
         }
         System.out.println("Total: " + cliente.getTotal());             
     }
+    /**
+     * Este metodo comprueba que el carro del cliente tenga algun articulo, en caso de tener algun articulo comprueba
+     * que tenga fondos para pagar los articulos, si tiene fondos se genera una nueva factura, se añade al gasto total del
+     * cliente el importe del pedido, se resta de la cartera el importe del pedido y se vacia el carro. Y se imprime
+     * un mensage en pantalla.
+     */
     public void realizarCompra(Cliente cliente){
         if(cliente.getNumarts() > 0){
             if(cliente.getCartera() < cliente.getTotal()){
                 System.out.println("No tiene fondos suficientes para realizar la compra.");
-            }else{
-                //facturaprueba = new Factura(cliente, cliente.getArticulos(), cliente.getTotal());
+            }else{              
                 historico.add(new Factura(cliente, cliente.getArticulos(), cliente.getTotal()));
+                cliente.setGastoTotal(cliente.getTotal());
+                cliente.restarCartera(cliente.getTotal());
                 cliente.vaciarCarro();
                 System.out.println("Compra realizada, Gracias!");
             }
@@ -47,21 +54,31 @@ public class Tienda{
             System.out.println("No tiene articulos en su carro.");
         }
     }
+    /**
+     * Este metodo imprime la factura que coincida con el numero de factura pasado como parametro
+     */
     public void showFactura(int numfac){
-        boolean encontrado = false;
-        Factura factura = null;
+        boolean encontrado = false;        
         Iterator<Factura> it = historico.iterator();
         while(it.hasNext()) {
          Factura item = it.next();            
             if(item.getNumfact() == numfac){
-                encontrado = true;
-                factura = item;
+                System.out.print(item.toString());
+                System.out.print("");//Linea en blanco 
+                encontrado = true;                
             }
         }
-        if(encontrado){
-            factura.toString();
-        }else{
-            System.out.println("No se encontro la factura.");
+        if(!encontrado){
+           System.out.println("No se encontro la factura.");
         }
-    } 
+    }
+    /**
+     * Este metodo imprime todas las facturas
+     */
+    public void showListadoFacrutas(){
+        for(Factura factura : historico){
+            System.out.print(factura.toString());
+            System.out.print("");
+        }
+    }
 }

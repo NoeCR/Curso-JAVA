@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 public class Cliente{
+    
     private Tienda tienda;
     private static int id = 1;
     private int idcliente;
@@ -8,7 +9,8 @@ public class Cliente{
     private double cartera;
     private ArrayList<Articulo> articulos;
     private double total;
-    private double gastocliente = 0;    
+    private double gastocliente = 0;   
+    
     public Cliente(Tienda tienda, String nombre, double cartera){
        this.idcliente = idcliente + id;       
        this.tienda = tienda; 
@@ -34,28 +36,31 @@ public class Cliente{
         return idcliente;
     }
     /**
-     * este metodo añade un articulo a la coleccion. Si  se encuentra dicho articulo, en lugar de añadirlo llama al metodo setCount que
-     * incrementa en una unidad ese articulo
+     * este metodo comprueba que el articulo tenga unidades para opder ser añadido a la coleccion de articulos del cliente
+     * En caso de que el valor de lass unidades sea 0 imprime que no queda stock, en caso contrario comprueba si el articulo ya esta en la
+     * coleccion. Si esta en la coleccion aumenta las unidades del articulo en la coleccion y lo resta de las unidades del articulo, si no esta 
+     * lo añade a la coleccion y resta una unidad al stock del articulo.
      */
     public void addArticulo(Articulo articulo){
         boolean encontrado = false;
-        for(Articulo art : articulos){
-            if(art.getNomart() == articulo.getNomart()){ 
-               if(art.getUnidades()-1 >= 1){
-                articulo.setCount();
-                setTotal(articulo.getPrecio());                
-                art.restaUnidad();
-               }else{
-                   System.out.println("No hay Stock del articulo");
-               }
-               encontrado = true;
-            }                
-        }
-        if(!encontrado){
-            articulos.add(articulo);        
-            articulo.setCount();        
-            setTotal(articulo.getPrecio());
-        }   
+        if(articulo.getUnidades()-1 >= 0){ 
+            for(Articulo art : articulos){
+                if(art.getNomart() == articulo.getNomart()){                          
+                   articulo.setCount();
+                   setTotal(articulo.getPrecio()); 
+                   articulo.restaUnidad();
+                   encontrado = true;
+                }                
+            }
+            if(!encontrado){
+                articulos.add(articulo);        
+                articulo.setCount();        
+                setTotal(articulo.getPrecio());
+                articulo.restaUnidad();
+            }  
+        }else{
+           System.out.println("No hay Stock del articulo");
+        } 
     }
     public ArrayList<Articulo> getArticulos(){
         ArrayList<Articulo> listadoarticulos = new ArrayList<Articulo>();
@@ -81,7 +86,7 @@ public class Cliente{
         while(it.hasNext()) {
          Articulo item = it.next();            
          it.remove();   
-         item.resetCount();         
+         item.resetCount();           
         }
         resetTotal();
     }
@@ -96,5 +101,8 @@ public class Cliente{
     }
     public int getCount(Articulo articulo){
         return articulo.getCount();
+    }
+    public void restarCartera(double valor){
+        cartera -= valor;
     }
 }

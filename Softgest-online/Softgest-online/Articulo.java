@@ -26,7 +26,8 @@ public class Articulo{
         this.precio = precio;
     }
     public void display(){
-        System.out.print(getNomart() + ","+ getPrecio());
+        System.out.print("Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: " + getUnidades());
+        System.out.print("");
     }
     public void setUnidades(int valor){
         unidades += valor;
@@ -42,6 +43,9 @@ public class Articulo{
     }
     public void resetCount(){
         count = 0;
+    }
+    public void resetArt(){
+        unidades = 0;
     }
     public void restaUnidad(){
         unidades--;
