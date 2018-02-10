@@ -81,4 +81,7 @@ public class Tienda{
             System.out.print("");//Linea en blanco 
         }
     }
+    public void displayCliente(Cliente cliente){
+        System.out.println(cliente.toString());
+    }
 }

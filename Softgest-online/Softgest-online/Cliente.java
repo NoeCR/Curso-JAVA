@@ -89,6 +89,9 @@ public class Cliente{
            System.out.println("Quedan: " + articulo.getUnidades() + ".uds");
         } 
     }
+    /**
+     * Metodo que devuelve un listado con todos los articulos del carro del cliente
+     */
     public ArrayList<Articulo> getArticulos(){
         ArrayList<Articulo> listadoarticulos = new ArrayList<Articulo>();
         for(Articulo articulo : articulos){
@@ -148,5 +151,17 @@ public class Cliente{
     }
     public void restarCartera(double valor){
         cartera -= valor;
+    }
+    public String toString(){
+        String infocliente;
+        infocliente = "ID: " + idcliente + "\n" + "Nombre: " + nombre + "\n" + "Cuenta cliente: " + cartera + "\n";
+        if(getNumarts() >0){
+            for(Articulo art : articulos){
+               infocliente += art.toString();
+            }
+        }
+        infocliente += "Total gastado: " + gastocliente;
+        return  infocliente; 
+                
     }
 }

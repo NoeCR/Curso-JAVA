@@ -19,4 +19,6 @@ comment7.text=\r\n\ Este\ metodo\ imprime\ la\ factura\ que\ coincida\ con\ el\ 
 comment8.params=
 comment8.target=void\ showListadoFacrutas()
 comment8.text=\r\n\ Este\ metodo\ imprime\ todas\ las\ facturas\r\n
-numComments=9
+comment9.params=cliente
+comment9.target=void\ displayCliente(Cliente)
+numComments=10
