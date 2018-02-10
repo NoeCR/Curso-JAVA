@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Tienda
+comment1.params=
+comment1.target=Tienda()
+comment2.params=cantidad\ articulo
+comment2.target=void\ realizarPedido(int,\ Articulo)
+comment3.params=valor\ cliente
+comment3.target=void\ aumentarCartera(int,\ Cliente)
+comment4.params=cliente
+comment4.target=int\ getNumarts(Cliente)
+comment5.params=cliente
+comment5.target=void\ displayCart(Cliente)
+comment6.params=cliente
+comment6.target=void\ realizarCompra(Cliente)
+comment7.params=numfac
+comment7.target=void\ showFactura(int)
+numComments=8

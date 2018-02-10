@@ -9,4 +9,6 @@
 <fullyQualifiedTypeName name="Sofgest.Import"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.RichTextString"/>
 </qualifiedTypeNameHistroy>
