@@ -5,7 +5,8 @@ public class Articulo{
     private double precio; 
     private int unidades;
     private int count = 0;
-    
+    private static int id = 1;
+    private int idart;
     public Articulo(String nomart, double precio){
        this.nomart = nomart;
        this.precio = precio;
@@ -15,6 +16,8 @@ public class Articulo{
        this.nomart = nomart;
        this.precio = precio;
        this.unidades = unidades;
+       this.idart= idart + id;
+       id++;
     }
     public String getNomart(){
         return nomart;
@@ -55,5 +58,8 @@ public class Articulo{
     }
     public void restarUnidades(int cantidad){
         unidades -= cantidad;
+    }
+    public int getId(){
+        return idart;
     }
 }

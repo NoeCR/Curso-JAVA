@@ -99,6 +99,9 @@ public class Cliente{
     public void setTotal(double valor){
         total += valor;
     }
+    public void restaTotal(double valor){
+        total -= valor;
+    }
     public double getTotal(){
         return total;
     }
@@ -116,6 +119,20 @@ public class Cliente{
          item.resetCount();           
         }
         resetTotal();
+    }
+    /**
+     * Metodo para eliminar un articulo del carro del cliente, y descontar del total del carro del cliente el precio del
+     * articulo por las unidades que tuviera
+     */
+    public void eliminarArticulo(Articulo articulo){
+        Iterator<Articulo> it = articulos.iterator();
+        while(it.hasNext()) {
+            Articulo item = it.next();
+            if(item.getId() == articulo.getId()){
+                restaTotal(articulo.getPrecio() * articulo.getCount());
+                it.remove();
+            }
+        }
     }
     public int getNumarts(){
         return articulos.size();
