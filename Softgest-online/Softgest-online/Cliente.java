@@ -36,10 +36,10 @@ public class Cliente{
         return idcliente;
     }
     /**
-     * este metodo comprueba que el articulo tenga unidades para opder ser añadido a la coleccion de articulos del cliente
-     * En caso de que el valor de lass unidades sea 0 imprime que no queda stock, en caso contrario comprueba si el articulo ya esta en la
-     * coleccion. Si esta en la coleccion aumenta las unidades del articulo en la coleccion y lo resta de las unidades del articulo, si no esta 
-     * lo añade a la coleccion y resta una unidad al stock del articulo.
+     * este metodo comprueba que el articulo tenga unidades para poder ser añadido a la coleccion de articulos del cliente
+     * En caso de que el valor de las unidades sea 0 imprime que no queda stock, en caso contrario comprueba si el articulo ya esta en la
+     * coleccion. Si esta en la coleccion aumenta las unidades del articulo en la coleccion y lo resta de las unidades del articulo, 
+     * si no esta lo añade a la coleccion y resta una unidad al stock del articulo.
      */
     public void addArticulo(Articulo articulo){
         boolean encontrado = false;
@@ -135,6 +135,28 @@ public class Cliente{
                 restaTotal(articulo.getPrecio() * articulo.getCount());
                 it.remove();
             }
+        }
+    }
+    /**
+     * Metodo que resta una unidad del contador de un articulo del carro del cliente o lo elimina si su cantidad es 0
+     */
+    public void restarArticulo(Articulo articulo){
+        if(articulo.getCount()-1 <= 0){
+            eliminarArticulo(articulo);
+        }else{
+            restaTotal(articulo.getPrecio());
+            articulo.restarCount();
+        }
+    }
+    /**
+     * Metodo que resta una cantidad del contador de un articulo del carro del cliente o lo elimina si llega a 0
+     */
+    public void restarArticulo(Articulo articulo, int cantidad){
+        if(articulo.getCount()-cantidad <= 0){
+            eliminarArticulo(articulo);
+        }else{
+            restaTotal(articulo.getPrecio() * cantidad);
+            articulo.restarCount(cantidad);
         }
     }
     public int getNumarts(){

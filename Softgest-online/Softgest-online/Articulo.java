@@ -53,6 +53,12 @@ public class Articulo{
     public void resetCount(){
         count = 0;
     }
+    public void restarCount(){
+        count--;
+    }
+    public void restarCount(int cantidad){
+        count -= cantidad;
+    }
     public void resetArt(){
         unidades = 0;
     }
