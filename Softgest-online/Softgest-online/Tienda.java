@@ -78,7 +78,7 @@ public class Tienda{
     public void showListadoFacrutas(){
         for(Factura factura : historico){
             System.out.print(factura.toString());
-            System.out.print("");
+            System.out.print("");//Linea en blanco 
         }
     }
 }

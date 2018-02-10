@@ -62,6 +62,33 @@ public class Cliente{
            System.out.println("No hay Stock del articulo");
         } 
     }
+    /**
+     * Este metodo es similar a addArticulo pero añadiendo el parametro cantidad para aumentar el numero de unidades
+     * del articulo, este metodo comprueba que haya suficiente Stock  y en caso contrario muestra un mensaje con 
+     * las unidades disponibles.
+     */
+    public void addArticulo(Articulo articulo, int cantidad){
+        boolean encontrado = false;
+        if(articulo.getUnidades()-cantidad >= 0){ 
+            for(Articulo art : articulos){
+                if(art.getNomart() == articulo.getNomart()){                          
+                   articulo.setCount(cantidad);
+                   setTotal(articulo.getPrecio() * cantidad); 
+                   articulo.restarUnidades(cantidad);
+                   encontrado = true;
+                }                
+            }
+            if(!encontrado){
+                articulos.add(articulo);        
+                articulo.setCount(cantidad);        
+                setTotal(articulo.getPrecio()*cantidad);
+                articulo.restarUnidades(cantidad);
+            }  
+        }else{
+           System.out.println("No disponemos de suficiente Stock del articulo");
+           System.out.println("Quedan: " + articulo.getUnidades() + ".uds");
+        } 
+    }
     public ArrayList<Articulo> getArticulos(){
         ArrayList<Articulo> listadoarticulos = new ArrayList<Articulo>();
         for(Articulo articulo : articulos){

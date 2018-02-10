@@ -41,6 +41,9 @@ public class Articulo{
     public void setCount(){
         count++;
     }
+    public void setCount(int cantidad){
+        count += cantidad;
+    }
     public void resetCount(){
         count = 0;
     }
@@ -49,5 +52,8 @@ public class Articulo{
     }
     public void restaUnidad(){
         unidades--;
+    }
+    public void restarUnidades(int cantidad){
+        unidades -= cantidad;
     }
 }
