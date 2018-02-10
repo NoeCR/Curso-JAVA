@@ -28,7 +28,8 @@ public class Tienda{
         while(it.hasNext()) {
              Articulo articulo = it.next();                     
              if(articulo.getCount() > 0) {
-                 System.out.println("Articulo " + articulo.getNomart() + " Precio " + (articulo.getPrecio()*articulo.getCount()) + " cantidad: " + articulo.getCount());
+                 System.out.println("Articulo " + articulo.getNomart() + " Precio " + (articulo.getPrecio()*articulo.getCount()) + 
+                 " cantidad: " + articulo.getCount());
              }
         }
         System.out.println("Total: " + cliente.getTotal());             
@@ -84,4 +85,36 @@ public class Tienda{
     public void displayCliente(Cliente cliente){
         System.out.println(cliente.toString());
     }
+    public void printFactura(int numfac){
+        Iterator<Factura> it = historico.iterator();
+        while(it.hasNext()) {
+         Factura item = it.next();            
+            if(item.getNumfact() == numfac){
+                System.out.print(item.toString());
+                System.out.print("");//Linea en blanco   
+            }else{
+                System.out.print("No se encontro la factura.");
+            }
+        }
+    } 
+     public void printFactura(Cliente cliente){
+        boolean encontrado = false; 
+        ArrayList<Factura> facturascliente = new ArrayList<Factura>();
+        Iterator<Factura> it = historico.iterator();
+        while(it.hasNext()) {
+         Factura item = it.next();            
+            if(item.getCliente().getIdcliente() == cliente.getIdcliente()){
+                encontrado = true;
+                facturascliente.add(item);                
+            }
+        }
+        if(encontrado){
+            for(Factura factura : facturascliente){
+                System.out.println(factura.toString());
+                System.out.print("");//Linea en blanco   
+            }
+        }else{
+            System.out.print("No hay ninguna factura de este cliente.");
+        }        
+    } 
 }

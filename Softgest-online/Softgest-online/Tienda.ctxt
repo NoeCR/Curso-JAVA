@@ -2,6 +2,10 @@
 comment0.target=Tienda
 comment1.params=
 comment1.target=Tienda()
+comment10.params=numfac
+comment10.target=void\ printFactura(int)
+comment11.params=cliente
+comment11.target=void\ printFactura(Cliente)
 comment2.params=cantidad\ articulo
 comment2.target=void\ realizarPedido(int,\ Articulo)
 comment3.params=valor\ cliente
@@ -21,4 +25,4 @@ comment8.target=void\ showListadoFacrutas()
 comment8.text=\r\n\ Este\ metodo\ imprime\ todas\ las\ facturas\r\n
 comment9.params=cliente
 comment9.target=void\ displayCliente(Cliente)
-numComments=10
+numComments=12

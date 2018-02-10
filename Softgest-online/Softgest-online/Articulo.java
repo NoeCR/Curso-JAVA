@@ -33,7 +33,7 @@ public class Articulo{
         System.out.print("");
     }
     public String toString(){
-        return "Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: " + getUnidades() + "\n";
+        return "Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: " +  getCount() + "\n";
     }
     public void setUnidades(int valor){
         unidades += valor;
