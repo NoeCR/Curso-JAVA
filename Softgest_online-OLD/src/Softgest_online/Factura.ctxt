@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Factura
-comment1.params=cliente\ articulos\ totalfact
-comment1.target=Factura(Cliente,\ java.util.ArrayList,\ double)
-comment2.params=
-comment2.target=int\ getNumfact()
-comment3.params=
-comment3.target=java.lang.String\ toString()
-numComments=4
