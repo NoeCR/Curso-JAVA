@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 public class Factura{ 
     
     private ArrayList<Articulo> articulos = new ArrayList<Articulo>();
-    //Array de int con la cantidad de cada articulo
+    private ArrayList<Integer> unidades = new ArrayList<Integer>();// En este arrya se deberian almacenar las unidades de cada articulo de la coleccion 
     private Cliente cliente;
     private double totalfact;
     private int numfac = 0;
@@ -15,6 +15,9 @@ public class Factura{
     public Factura(Cliente cliente, ArrayList<Articulo> articulos, double totalfact){        
         this.cliente = cliente;
         this.articulos = articulos;
+        for(Articulo articulo : articulos){
+            this.unidades.add(articulo.getCount());
+        }
         this.totalfact = totalfact;
         this.numfac = numfac + id;
         this.fecha = getFecha();
@@ -56,9 +59,11 @@ public class Factura{
     }
     public String toString(){ 
         String infoartic ="";
+        int i = 0;
         if(getNumarts() >0){
             for(Articulo art : articulos){
-               infoartic += art.toString();
+               infoartic += art.toString() + unidades.get(i) + "\n";
+               i++;
             }
         }
         return "Nº Factura: " + numfac + "\n" + "Nombre del cliente: " + cliente.getNombre() + "\n" + 
