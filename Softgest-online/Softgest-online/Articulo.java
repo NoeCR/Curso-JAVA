@@ -3,19 +3,19 @@ public class Articulo{
 
     private String nomart;
     private double precio; 
-    private int unidades;
+    private int cantidad;
     private int count = 0;
     private static int id = 1;
     private int idart;
     public Articulo(String nomart, double precio){
        this.nomart = nomart;
        this.precio = precio;
-       this.unidades = 0;
+       this.cantidad = 0;
     }
     public Articulo(String nomart, double precio, int unidades){
        this.nomart = nomart;
        this.precio = precio;
-       this.unidades = unidades;
+       this.cantidad = unidades;
        this.idart= idart + id;
        id++;
     }
@@ -29,17 +29,17 @@ public class Articulo{
         this.precio = precio;
     }
     public void display(){
-        System.out.print("Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: " + getUnidades());
-        System.out.print("");
+        System.out.print("Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: " + getCantidad());
+        System.out.println("");
     }
     public String toString(){
         return "Articulo: " + getNomart() + " Precio: "+ getPrecio() + " Unidades: ";
     }
     public void setUnidades(int valor){
-        unidades += valor;
+        cantidad += valor;
     }
-    public int getUnidades(){
-        return unidades;
+    public int getCantidad(){
+        return cantidad;
     }
     public int getCount(){
         return count;
@@ -60,13 +60,13 @@ public class Articulo{
         count -= cantidad;
     }
     public void resetArt(){
-        unidades = 0;
+        cantidad = 0;
     }
     public void restaUnidad(){
-        unidades--;
+        cantidad--;
     }
-    public void restarUnidades(int cantidad){
-        unidades -= cantidad;
+    public void restarUnidades(int valor){
+        cantidad -= valor;
     }
     public int getId(){
         return idart;

@@ -46,7 +46,7 @@ public class Cliente{
      */
     public void addArticulo(Articulo articulo){
         boolean encontrado = false;
-        if(articulo.getUnidades()-1 >= 0){ 
+        if(articulo.getCantidad()-1 >= 0){ 
             for(Articulo art : articulos){
                 if(art.getNomart() == articulo.getNomart()){                          
                    articulo.setCount();
@@ -72,7 +72,7 @@ public class Cliente{
      */
     public void addArticulo(Articulo articulo, int cantidad){
         boolean encontrado = false;
-        if(articulo.getUnidades()-cantidad >= 0){ 
+        if(articulo.getCantidad()-cantidad >= 0){ 
             for(Articulo art : articulos){
                 if(art.getNomart() == articulo.getNomart()){                          
                    articulo.setCount(cantidad);
@@ -89,7 +89,7 @@ public class Cliente{
             }  
         }else{
            System.out.println("No disponemos de suficiente Stock del articulo");
-           System.out.println("Quedan: " + articulo.getUnidades() + ".uds");
+           System.out.println("Quedan: " + articulo.getCantidad() + ".uds");
         } 
     }
     /**
@@ -136,6 +136,8 @@ public class Cliente{
             Articulo item = it.next();
             if(item.getId() == articulo.getId()){
                 restaTotal(articulo.getPrecio() * articulo.getCount());
+                articulo.setUnidades(articulo.getCount());
+                articulo.resetCount();
                 it.remove();
             }
         }
@@ -144,21 +146,23 @@ public class Cliente{
      * Metodo que resta una unidad del contador de un articulo del carro del cliente o lo elimina si su cantidad es 0
      */
     public void restarArticulo(Articulo articulo){
-        if(articulo.getCount()-1 <= 0){
+        if(articulo.getCount()-1 <= 0){            
             eliminarArticulo(articulo);
         }else{
             restaTotal(articulo.getPrecio());
-            articulo.restarCount();
+            articulo.setUnidades(1);
+            articulo.restarCount();            
         }
     }
     /**
      * Metodo que resta una cantidad del contador de un articulo del carro del cliente o lo elimina si llega a 0
      */
     public void restarArticulo(Articulo articulo, int cantidad){
-        if(articulo.getCount()-cantidad <= 0){
+        if(articulo.getCount()-cantidad <= 0){            
             eliminarArticulo(articulo);
         }else{
             restaTotal(articulo.getPrecio() * cantidad);
+            articulo.setUnidades(cantidad);
             articulo.restarCount(cantidad);
         }
     }
@@ -185,7 +189,7 @@ public class Cliente{
         infocliente = "ID: " + idcliente + "\n" + "Nombre: " + nombre + "\n" + "Cuenta cliente: " + cartera + "\n";
         if(getNumarts() >0){
             for(Articulo art : articulos){
-               infocliente += art.toString();
+               infocliente += "Articulo: " + art.getNomart() + " Precio " + art.getPrecio() + "\n";
             }
         }
         infocliente += "Total gastado: " + gastocliente;

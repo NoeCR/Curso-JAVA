@@ -47,7 +47,7 @@ public class Tienda{
             }else{              
                 historico.add(new Factura(cliente, cliente.getArticulos(), cliente.getTotal()));
                 cliente.setGastoTotal(cliente.getTotal());
-                cliente.restarCartera(cliente.getTotal());
+                cliente.restarCartera(cliente.getTotal());          
                 cliente.vaciarCarro();
                 System.out.println("Compra realizada, Gracias!" +"\n");                
             }
@@ -112,17 +112,25 @@ public class Tienda{
      */
     public void devolucionFactura(int numfac){
         Factura buscada = findFactura(numfac);
-        //System.out.println(buscada.toString());
-        historico.add(new Factura(buscada));
-        Iterator<Factura> it = historico.iterator();
-        while(it.hasNext()) {
-         Factura item = it.next();            
-            if(item.getNumfact() == historico.get(historico.size()-1).getNumfact()){
-                System.out.println("esta debe ser la ultima factura creada pasada desde este metodo");
-                item.getCliente().setCartera(item.getTotal());//Se devuelve el importe de la devolucion a la cartera del cliente
-                item.getCliente().restaGastoTotal(item.getTotal());//Resta del gasto total del cliente el importe de la factura
+        int i = 0;
+        if(buscada != null){
+            historico.add(new Factura(buscada));
+            Iterator<Factura> it = historico.iterator();
+            while(it.hasNext()) {
+             Factura item = it.next();            
+                if(item.getNumfact() == historico.get(historico.size()-1).getNumfact()){
+                    System.out.println("esta debe ser la ultima factura creada desde este metodo");
+                    item.getCliente().setCartera(item.getTotal());//Se devuelve el importe de la devolucion a la cartera del cliente
+                    item.getCliente().restaGastoTotal(item.getTotal());//Resta del gasto total del cliente el importe de la factura
+                    for(Articulo articulo : item.getArticulos()){
+                        articulo.setUnidades(item.getUnidades().get(i));//suma la cantidad de articulos a las unidades disponibles del articulo
+                        i++;
+                    }
+                }
             }
-        }
+        }else{
+            System.out.print("No se encontro la factura.");
+        }     
     }
      public void printFactura(Cliente cliente){
         boolean encontrado = false; 

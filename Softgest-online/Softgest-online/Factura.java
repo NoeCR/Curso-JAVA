@@ -27,9 +27,14 @@ public class Factura{
      * Metodo constructor para realiazr devoluciones de facturas a clientes, 
      */
     public Factura (Factura factura){
+        int i = 0;
         this.concepto = "Devolucion factura Nº: " + factura.getNumfact();
         this.cliente = factura.getCliente() ;
         this.articulos = factura.getArticulos();
+        for(Articulo articulo : articulos){
+            this.unidades.add(factura.getUnidades().get(i));
+            i++;
+        }
         this.totalfact = factura.getTotal();
         this.numfac = numfac + id;
         this.fecha = getFecha();
@@ -44,6 +49,13 @@ public class Factura{
             listadoarticulos.add(articulo);
         }
         return listadoarticulos;
+    }
+    public ArrayList<Integer> getUnidades(){
+        ArrayList<Integer> udarticulos = new ArrayList<Integer>();
+        for(Integer unidad : unidades){
+            udarticulos.add(unidad);
+        }
+        return udarticulos;
     }
     public int getNumfact(){
         return numfac;
@@ -62,7 +74,7 @@ public class Factura{
         int i = 0;
         if(getNumarts() >0){
             for(Articulo art : articulos){
-               infoartic += art.toString() + unidades.get(i) + "\n";
+               infoartic += art.toString() + getUnidades().get(i) + "\n";
                i++;
             }
         }
