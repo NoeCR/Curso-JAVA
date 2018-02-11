@@ -23,10 +23,13 @@ public class Cliente{
     public String getNombre(){
         return nombre;
     }
+    public void setNombre(String nuevonombre){
+        this.nombre = nuevonombre;
+    }
     public double getCartera(){
         return cartera;
     }
-    public void setCartera(int valor){
+    public void setCartera(double valor){
         cartera += valor;
     }
     public void setId(){
@@ -167,6 +170,9 @@ public class Cliente{
     }
     public void setGastoTotal(double valor){
         gastocliente += valor;
+    }
+    public void restaGastoTotal(double valor){
+        gastocliente -= valor;
     }
     public int getCount(Articulo articulo){
         return articulo.getCount();

@@ -16,7 +16,7 @@ public class Tienda{
     public void realizarPedido(int cantidad, Articulo articulo){
         articulo.setUnidades(cantidad);
     }
-    public void aumentarCartera(int valor, Cliente cliente){
+    public void aumentarCartera(double valor, Cliente cliente){
         cliente.setCartera(valor);
     }
     public int getNumarts(Cliente cliente){
@@ -49,10 +49,10 @@ public class Tienda{
                 cliente.setGastoTotal(cliente.getTotal());
                 cliente.restarCartera(cliente.getTotal());
                 cliente.vaciarCarro();
-                System.out.println("Compra realizada, Gracias!");
+                System.out.println("Compra realizada, Gracias!" +"\n");                
             }
         }else{
-            System.out.println("No tiene articulos en su carro.");
+            System.out.println("No tiene articulos en su carro." +"\n");
         }
     }
     /**
@@ -85,18 +85,45 @@ public class Tienda{
     public void displayCliente(Cliente cliente){
         System.out.println(cliente.toString());
     }
-    public void printFactura(int numfac){
+    public Factura findFactura(int numfac){
+        Factura factura = null;
         Iterator<Factura> it = historico.iterator();
         while(it.hasNext()) {
          Factura item = it.next();            
             if(item.getNumfact() == numfac){
-                System.out.print(item.toString());
+                factura = item;
+            }
+        }
+        return factura;
+    }
+    public void printFactura(int numfac){
+        Factura buscada = findFactura(numfac);            
+            if(buscada != null){
+                System.out.print(buscada.toString());
                 System.out.print("");//Linea en blanco   
             }else{
                 System.out.print("No se encontro la factura.");
+            }        
+    }
+    /**
+     * Este metodo debe crear una nueva factura, obtener el ultimo elemento de la colección del historico y a traves de los datos de este elemento
+     * realizar la devolucion del importe al cliente, añadir la cantidad de cada articulo devuelto ( que seran todos los que se reflejen en la factura)
+     * restar del total de gasto del cliente el importe de la factura
+     */
+    public void devolucionFactura(int numfac){
+        Factura buscada = findFactura(numfac);
+        //System.out.println(buscada.toString());
+        historico.add(new Factura(buscada));
+        Iterator<Factura> it = historico.iterator();
+        while(it.hasNext()) {
+         Factura item = it.next();            
+            if(item.getNumfact() == historico.get(historico.size()-1).getNumfact()){
+                System.out.println("esta debe ser la ultima factura creada pasada desde este metodo");
+                item.getCliente().setCartera(item.getTotal());//Se devuelve el importe de la devolucion a la cartera del cliente
+                item.getCliente().restaGastoTotal(item.getTotal());//Resta del gasto total del cliente el importe de la factura
             }
         }
-    } 
+    }
      public void printFactura(Cliente cliente){
         boolean encontrado = false; 
         ArrayList<Factura> facturascliente = new ArrayList<Factura>();
