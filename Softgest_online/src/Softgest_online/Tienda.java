@@ -1,30 +1,26 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Tienda{
-   
-    private ArrayList<Articulo> articulos;
-    private ArrayList<Cliente> clientes;
+public class Tienda{    
+    
     private ArrayList<Factura> historico;
     
-    public Tienda(){
-        articulos = new ArrayList<Articulo>();
-        clientes = new ArrayList<Cliente>();
+    public Tienda(){        
         historico = new ArrayList<Factura>();
     }
 
-    public void realizarPedido(int cantidad, Articulo articulo){
+    public void realizarPedido(int cantidad, Pc articulo){
         articulo.setUnidades(cantidad);
     }
     public void aumentarCartera(double valor, Cliente cliente){
         cliente.setCartera(valor);
     }
-    public int getNumarts(Cliente cliente){
-        return cliente.getNumarts();
+    public int getNumarts(Carro carro){
+        return carro.getNumarts();
     }
-    public void displayCart(Cliente cliente){        
-        System.out.println("Cliente: " +cliente.getNombre());
-        Iterator<Articulo> it = cliente.getArticulos().iterator();
+    public void displayCart(Carro carro){        
+        System.out.println("Cliente: " +carro.getCliente().getNombre());
+        Iterator<Articulo> it = carro.getArticulos().iterator();
         while(it.hasNext()) {
              Articulo articulo = it.next();                     
              if(articulo.getCount() > 0) {
@@ -32,7 +28,7 @@ public class Tienda{
                  " cantidad: " + articulo.getCount());
              }
         }
-        System.out.println("Total: " + cliente.getTotal());             
+        System.out.println("Total: " + carro.getTotal());             
     }
     /**
      * Este metodo comprueba que el carro del cliente tenga algun articulo, en caso de tener algun articulo comprueba
@@ -40,15 +36,17 @@ public class Tienda{
      * cliente el importe del pedido, se resta de la cartera el importe del pedido y se vacia el carro. Y se imprime
      * un mensage en pantalla.
      */
-    public void realizarCompra(Cliente cliente){
-        if(cliente.getNumarts() > 0){
-            if(cliente.getCartera() < cliente.getTotal()){
+    public void realizarCompra(Carro carro){
+        if(carro.getNumarts() > 0){
+            if(carro.getCliente().getCartera() < carro.getTotal()){
                 System.out.println("No tiene fondos suficientes para realizar la compra.");
-            }else{              
-                historico.add(new Factura(cliente, cliente.getArticulos(), cliente.getTotal()));
-                cliente.setGastoTotal(cliente.getTotal());
-                cliente.restarCartera(cliente.getTotal());          
-                cliente.vaciarCarro();
+            }else{ 
+                Factura f = new Factura(carro);
+                historico.add(f);
+                carro.getCliente().setGastoTotal(f.getTotal());
+                carro.getCliente().restarCartera(f.getTotal());          
+                carro.vaciarCarro();
+                System.out.println(f.toString());
                 System.out.println("Compra realizada, Gracias!" +"\n");                
             }
         }else{
@@ -120,8 +118,8 @@ public class Tienda{
              Factura item = it.next();            
                 if(item.getNumfact() == historico.get(historico.size()-1).getNumfact()){
                     System.out.println("esta debe ser la ultima factura creada desde este metodo");
-                    item.getCliente().setCartera(item.getTotal());//Se devuelve el importe de la devolucion a la cartera del cliente
-                    item.getCliente().restaGastoTotal(item.getTotal());//Resta del gasto total del cliente el importe de la factura
+                    item.getCarro().getCliente().setCartera(item.getTotal());//Se devuelve el importe de la devolucion a la cartera del cliente
+                    item.getCarro().getCliente().restaGastoTotal(item.getTotal());//Resta del gasto total del cliente el importe de la factura
                     for(Articulo articulo : item.getArticulos()){
                         articulo.setUnidades(item.getUnidades().get(i));//suma la cantidad de articulos a las unidades disponibles del articulo
                         i++;
@@ -138,7 +136,7 @@ public class Tienda{
         Iterator<Factura> it = historico.iterator();
         while(it.hasNext()) {
          Factura item = it.next();            
-            if(item.getCliente().getIdcliente() == cliente.getIdcliente()){
+            if(item.getCarro().getCliente().getIdcliente() == cliente.getIdcliente()){
                 encontrado = true;
                 facturascliente.add(item);                
             }

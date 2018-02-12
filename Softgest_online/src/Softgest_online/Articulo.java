@@ -1,5 +1,5 @@
 
-public class Articulo{
+public abstract class Articulo{
 
     private String nomart;
     private double precio; 

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Pc
+comment1.params=nomart\ precio\ unidades\ tipo
+comment1.target=Pc(java.lang.String,\ double,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getTipo()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
