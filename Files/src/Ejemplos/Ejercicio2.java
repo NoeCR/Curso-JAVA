@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.io.IOException;
 
 
-public class Ejercicio1 {
+public class Ejercicio2 {
 	public static void main(String[] args) throws IOException {
 		int select = 0;
 		ArrayList<File> directorios = new ArrayList<File>();
@@ -26,13 +26,13 @@ public class Ejercicio1 {
 					System.out.println(count + ".- Directorio padre");
 					for (File e : f.listFiles()){
 						count++;
-						
+						String s = comprobarPermisos(e);
 						if(!f.isHidden()) {
 							if(e.isDirectory()) {
-								System.out.println(count + ". - "  + e + "<Directorio>");
+								System.out.println(count + ". - " + s + "/t" + e + "<Directorio>");
 								directorios.add(e);
 							}else {
-								System.out.println(count + ". - " + e +" tamaño: " +e.length() +" Bytes");
+								System.out.println(count + ". - " + s + "/t" + e +" tamaño: " +e.length() +" Bytes");
 								directorios.add(e);
 							}
 						}
@@ -87,5 +87,16 @@ public class Ejercicio1 {
 		}
 		
 	}
-	
+	public static String comprobarPermisos(File f) {
+		String permisos = "";
+			if(f.isDirectory()) permisos +="d";
+			else permisos +="-";
+			if(f.canRead()) permisos +="r";
+			else permisos +="-";
+			if(f.canWrite()) permisos +="w";
+			else permisos +="-";
+			if(f.canExecute()) permisos +="x";
+			else permisos +="-";
+	return permisos;	
+	}
 }
