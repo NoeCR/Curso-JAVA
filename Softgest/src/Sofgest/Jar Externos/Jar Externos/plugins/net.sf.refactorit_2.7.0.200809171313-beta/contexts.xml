@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contexts>
+<context id="images_topLevelFolder">
+<topic label="RIT" href="help/images/toplevel.png"/>
+</context>
+<context id="_top">
+<topic label="RIT" href="help/toolHelp/manual.html"/>
+</context>
+<context id="_intro">
+<topic label="RIT" href="help/toolHelp/intro.html"/>
+</context>
+<context id="_refactoring">
+<topic label="RIT" href="help/toolHelp/refactoring.html"/>
+</context>
+<context id="getStart_startdoc">
+<topic label="RIT" href="help/toolHelp/getting_started/getting_started.html"/>
+</context>
+<context id="getStart_concepts">
+<topic label="RIT" href="help/toolHelp/getting_started/concepts.html"/>
+</context>
+<context id="getStart_refactoritOptions">
+<topic label="RIT" href="help/toolHelp/getting_started/refactorit_options.html"/>
+</context>
+<context id="getStart_projectSettings">
+<topic label="RIT" href="help/toolHelp/getting_started/project_settings.html"/>
+</context>
+<context id="getStart_cache">
+<topic label="RIT" href="help/toolHelp/getting_started/cache.html"/>
+</context>
+<context id="getStart_shortcuts">
+<topic label="RIT" href="help/toolHelp/getting_started/shortcuts.html"/>
+</context>
+<context id="getStart_toolbar">
+<topic label="RIT" href="help/toolHelp/getting_started/toolbar.html"/>
+</context>
+<context id="getStart_integrations">
+<topic label="RIT" href="help/toolHelp/getting_started/integrations.html"/>
+</context>
+<context id="getStart_refactoritUpdater">
+<topic label="RIT" href="help/toolHelp/getting_started/refactorit_updater.html"/>
+</context>
+<context id="getStart_eclipse_overview">
+<topic label="RIT" href="help/toolHelp/getting_started/eclipse/overview.html"/>
+</context>
+<context id="getStart_netbeans_overview">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/overview.html"/>
+</context>
+<context id="getStart_netbeans_autodetect">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/autodetect.html"/>
+</context>
+<context id="getStart_netbeans_settings">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/settings.html"/>
+</context>
+<context id="getStart_netbeans_project">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/project.html"/>
+</context>
+<context id="getStart_netbeans_sources_for_reference">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/sources_for_reference.html"/>
+</context>
+<context id="getStart_netbeans_javadocs">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/javadocs.html"/>
+</context>
+<context id="getStart_netbeans_vcs_overview">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/vcs/overview.html"/>
+</context>
+<context id="getStart_netbeans_vcs_troubleshooting">
+<topic label="RIT" href="help/toolHelp/getting_started/netbeans/vcs/troubleshooting.html"/>
+</context>
+<context id="getStart_jb_overview">
+<topic label="RIT" href="help/toolHelp/getting_started/jbuilder/overview.html"/>
+</context>
+<context id="getStart_jdev_overview">
+<topic label="RIT" href="help/toolHelp/getting_started/jdev/overview.html"/>
+</context>
+<context id="getStart_setUpInStandalone">
+<topic label="RIT" href="help/toolHelp/getting_started/standalone/standalone.html"/>
+</context>
+<context id="versions_overview">
+<topic label="RIT" href="help/toolHelp/versions/overview.html"/>
+</context>
+<context id="versions_integr">
+<topic label="RIT" href="help/toolHelp/versions/free.html"/>
+</context>
+<context id="refact">
+<topic label="RIT" href="help/toolHelp/refactorings/overview.html"/>
+</context>
+<context id="refact_results_panel">
+<topic label="RIT" href="help/toolHelp/refactorings/results_panel.html"/>
+</context>
+<context id="refact_query_results">
+<topic label="RIT" href="help/toolHelp/refactorings/query_results.html"/>
+</context>
+<context id="refact_undo">
+<topic label="RIT" href="help/toolHelp/refactorings/undo.html"/>
+</context>
+<context id="refact_vcs">
+<topic label="RIT" href="help/toolHelp/refactorings/vcs.html"/>
+</context>
+<context id="refact_unicode">
+<topic label="RIT" href="help/toolHelp/refactorings/unicode.html"/>
+</context>
+<context id="refact_whereUsed">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/overview.html"/>
+</context>
+<context id="refact_whereUsed_filters">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filters.html"/>
+</context>
+<context id="refact_whereUsed_filters_checkSupertypesAndSubtypes">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/supertypes_and_subtypes.html"/>
+</context>
+<context id="refact_whereUsed_filters_class">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_class.html"/>
+</context>
+<context id="refact_whereUsed_filters_interface">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_interface.html"/>
+</context>
+<context id="refact_whereUsed_filters_method">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_method.html"/>
+</context>
+<context id="refact_whereUsed_filters_package">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_package.html"/>
+</context>
+<context id="refact_whereUsed_filters_variable">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_variable.html"/>
+</context>
+<context id="refact_whereUsed_filters_simple">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/filter_simple.html"/>
+</context>
+<context id="refact_whereUsed_field">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/field.html"/>
+</context>
+<context id="refact_whereUsed_param_and_local">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/parameter_and_local.html"/>
+</context>
+<context id="refact_whereUsed_method">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/method.html"/>
+</context>
+<context id="refact_whereUsed_type">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/type.html"/>
+</context>
+<context id="refact_whereUsed_package">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/package.html"/>
+</context>
+<context id="refact_whereUsed_limitations">
+<topic label="RIT" href="help/toolHelp/refactorings/where_used/limitations.html"/>
+</context>
+<context id="refact_notUsed">
+<topic label="RIT" href="help/toolHelp/refactorings/not_used/overview.html"/>
+</context>
+<context id="refact_notUsed_limitations">
+<topic label="RIT" href="help/toolHelp/refactorings/not_used/limitations.html"/>
+</context>
+<context id="refact_notUsed_filter">
+<topic label="RIT" href="help/toolHelp/refactorings/not_used/filter.html"/>
+</context>
+<context id="refact_typeInfo">
+<topic label="RIT" href="help/toolHelp/refactorings/type_info/overview.html"/>
+</context>
+<context id="refact_typeInfo_hierarchy">
+<topic label="RIT" href="help/toolHelp/refactorings/type_info/hierarchy.html"/>
+</context>
+<context id="refact_subtypes">
+<topic label="RIT" href="help/toolHelp/refactorings/subtypes/overview.html"/>
+</context>
+<context id="refact_duplicate_strings">
+<topic label="RIT" href="help/toolHelp/refactorings/duplicate_strings/overview.html"/>
+</context>
+<context id="refact_fixmeScan">
+<topic label="RIT" href="help/toolHelp/refactorings/fixme_scanner/overview.html"/>
+</context>
+<context id="refact_fixmeScan_words">
+<topic label="RIT" href="help/toolHelp/refactorings/fixme_scanner/words.html"/>
+</context>
+<context id="refact_fixmeScan_timestamps">
+<topic label="RIT" href="help/toolHelp/refactorings/fixme_scanner/timestamps.html"/>
+</context>
+<context id="refact_rename">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/overview.html"/>
+</context>
+<context id="refact_rename_package">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/package.html"/>
+</context>
+<context id="refact_rename_type">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/type.html"/>
+</context>
+<context id="refact_rename_field">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/field.html"/>
+</context>
+<context id="refact_rename_local">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/param_and_local.html"/>
+</context>
+<context id="refact_rename_method">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/method.html"/>
+</context>
+<context id="refact_rename_impact">
+<topic label="RIT" href="help/toolHelp/refactorings/rename/impact.html"/>
+</context>
+<context id="refact_extract_method">
+<topic label="RIT" href="help/toolHelp/refactorings/extract_method/overview.html"/>
+</context>
+<context id="refact_extract_method_example">
+<topic label="RIT" href="help/toolHelp/refactorings/extract_method/example.html"/>
+</context>
+<context id="refact_create_ctor">
+<topic label="RIT" href="help/toolHelp/refactorings/create_constructor/overview.html"/>
+</context>
+<context id="refact_create_ctor_example">
+<topic label="RIT" href="help/toolHelp/refactorings/create_constructor/example.html"/>
+</context>
+<context id="refact_factory_method">
+<topic label="RIT" href="help/toolHelp/refactorings/factory_method/overview.html"/>
+</context>
+<context id="refact_factory_method_example">
+<topic label="RIT" href="help/toolHelp/refactorings/factory_method/example.html"/>
+</context>
+<context id="refact_extract_super">
+<topic label="RIT" href="help/toolHelp/refactorings/extract_super/overview.html"/>
+</context>
+<context id="refact_extract_super_superclass">
+<topic label="RIT" href="help/toolHelp/refactorings/extract_super/superclass.html"/>
+</context>
+<context id="refact_extract_super_interface">
+<topic label="RIT" href="help/toolHelp/refactorings/extract_super/interface.html"/>
+</context>
+<context id="refact_encapsulate_field">
+<topic label="RIT" href="help/toolHelp/refactorings/encapsulate_field/overview.html"/>
+</context>
+<context id="refact_pull_up_push_down">
+<topic label="RIT" href="help/toolHelp/refactorings/pull_up_push_down/overview.html"/>
+</context>
+<context id="refact_pull_up_push_down_conflicts">
+<topic label="RIT" href="help/toolHelp/refactorings/pull_up_push_down/conflicts.html"/>
+</context>
+<context id="refact_goto_declaration">
+<topic label="RIT" href="help/toolHelp/refactorings/goto_declaration/overview.html"/>
+</context>
+<context id="refact_add_delegates">
+<topic label="RIT" href="help/toolHelp/refactorings/add_delegates/overview.html"/>
+</context>
+<context id="refact_use_supertype">
+<topic label="RIT" href="help/toolHelp/refactorings/use_supertype/overview.html"/>
+</context>
+<context id="refact_temp_to_field">
+<topic label="RIT" href="help/toolHelp/refactorings/temp_to_field/overview.html"/>
+</context>
+<context id="refact_introduce_temp">
+<topic label="RIT" href="help/toolHelp/refactorings/introduce_temp/overview.html"/>
+</context>
+<context id="refact_inline_method">
+<topic label="RIT" href="help/toolHelp/refactorings/inline_method/overview.html"/>
+</context>
+<context id="refact_inline">
+<topic label="RIT" href="help/toolHelp/refactorings/inline/overview.html"/>
+</context>
+<context id="refact_override_methods">
+<topic label="RIT" href="help/toolHelp/refactorings/override_methods/overview.html"/>
+</context>
+<context id="refact_inlineVariable">
+<topic label="RIT" href="help/toolHelp/refactorings/inline_variable/overview.html"/>
+</context>
+<context id="refact_changeSignature">
+<topic label="RIT" href="help/toolHelp/refactorings/overview.html"/>
+</context>
+<context id="refact_metrics">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/overview.html"/>
+</context>
+<context id="refact_metrics_loc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/loc.html"/>
+</context>
+<context id="refact_metrics_ncloc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/ncloc.html"/>
+</context>
+<context id="refact_metrics_cloc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/cloc.html"/>
+</context>
+<context id="refact_metrics_dc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/dc.html"/>
+</context>
+<context id="refact_metrics_np">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/np.html"/>
+</context>
+<context id="refact_metrics_exec">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/exec.html"/>
+</context>
+<context id="refact_metrics_cc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/cyclomatic_complexity.html"/>
+</context>
+<context id="refact_metrics_wmc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/wmc.html"/>
+</context>
+<context id="refact_metrics_rfc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/rfc.html"/>
+</context>
+<context id="refact_metrics_dit">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/dit.html"/>
+</context>
+<context id="refact_metrics_noc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/noc.html"/>
+</context>
+<context id="refact_metrics_not">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/not.html"/>
+</context>
+<context id="refact_metrics_nota">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/nota.html"/>
+</context>
+<context id="refact_metrics_notc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/notc.html"/>
+</context>
+<context id="refact_metrics_note">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/note.html"/>
+</context>
+<context id="refact_metrics_ca">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/ca.html"/>
+</context>
+<context id="refact_metrics_ce">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/ce.html"/>
+</context>
+<context id="refact_metrics_a">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/a.html"/>
+</context>
+<context id="refact_metrics_i">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/i.html"/>
+</context>
+<context id="refact_metrics_d">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/d.html"/>
+</context>
+<context id="refact_metrics_cyc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/cyc.html"/>
+</context>
+<context id="refact_metrics_dcyc">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/dcyc.html"/>
+</context>
+<context id="refact_metrics_lsp">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/lsp.html"/>
+</context>
+<context id="refact_metrics_dip">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/dip.html"/>
+</context>
+<context id="refact_metrics_ep">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/ep.html"/>
+</context>
+<context id="refact_metrics_mq">
+<topic label="RIT" href="help/toolHelp/refactorings/metrics/mq.html"/>
+</context>
+<context id="refact_min_access">
+<topic label="RIT" href="help/toolHelp/refactorings/min_access/overview.html"/>
+</context>
+<context id="refact_move">
+<topic label="RIT" href="help/toolHelp/refactorings/move/overview.html"/>
+</context>
+<context id="refact_movetype">
+<topic label="RIT" href="help/toolHelp/refactorings/move_type/overview.html"/>
+</context>
+<context id="refact_movemember">
+<topic label="RIT" href="help/toolHelp/refactorings/move_member/overview.html"/>
+</context>
+<context id="refact_movemember_functionality">
+<topic label="RIT" href="help/toolHelp/refactorings/move_member/functionality.html"/>
+</context>
+<context id="refact_movemember_conflicts">
+<topic label="RIT" href="help/toolHelp/refactorings/move_member/conflicts.html"/>
+</context>
+<context id="refact_apids">
+<topic label="RIT" href="help/toolHelp/refactorings/apids/overview.html"/>
+</context>
+<context id="refact_dependencies">
+<topic label="RIT" href="help/toolHelp/refactorings/dependencies/overview.html"/>
+</context>
+<context id="refact_dependencies_limitations">
+<topic label="RIT" href="help/toolHelp/refactorings/dependencies/limitations.html"/>
+</context>
+<context id="refact_show_dependencies">
+<topic label="RIT" href="help/toolHelp/refactorings/dependencies/show_dependencies.html"/>
+</context>
+<context id="refact_draw_dependencies">
+<topic label="RIT" href="help/toolHelp/refactorings/dependencies/draw_dependencies.html"/>
+</context>
+<context id="refact_show_javadoc">
+<topic label="RIT" href="help/toolHelp/refactorings/show_javadoc/overview.html"/>
+</context>
+<context id="refact_search">
+<topic label="RIT" href="help/toolHelp/refactorings/search/overview.html"/>
+</context>
+<context id="refact_clean_imports">
+<topic label="RIT" href="help/toolHelp/refactorings/clean_imports/overview.html"/>
+</context>
+<context id="refact_crossref_html">
+<topic label="RIT" href="help/toolHelp/refactorings/cross_referencing_html/overview.html"/>
+</context>
+<context id="refact_audit">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/overview.html"/>
+</context>
+<context id="refact_audit_aborted_finally">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/aborted_finally.html"/>
+</context>
+<context id="refact_audit_abstract_override">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/abstract_override.html"/>
+</context>
+<context id="refact_audit_abstract_subclass">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/abstract_subclass.html"/>
+</context>
+<context id="refact_audit_boolean_comparison">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/boolean_comparison.html"/>
+</context>
+<context id="refact_audit_constant_field">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/constant_field.html"/>
+</context>
+<context id="refact_audit_dangerous_catch">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/dangerous_catch.html"/>
+</context>
+<context id="refact_audit_dangerous_throw">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/dangerous_throw.html"/>
+</context>
+<context id="refact_audit_debug_code">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/debug_code.html"/>
+</context>
+<context id="refact_audit_empty_blocks">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/empty_blocks.html"/>
+</context>
+<context id="refact_audit_empty_statement">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/empty_statement.html"/>
+</context>
+<context id="refact_audit_equals_hashcode">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/equals_hashcode.html"/>
+</context>
+<context id="refact_audit_equals_on_diff_types">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/equals_on_diff_types.html"/>
+</context>
+<context id="refact_audit_finalize_locals">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/finalize_locals.html"/>
+</context>
+<context id="refact_audit_finalize_methods">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/finalize_methods.html"/>
+</context>
+<context id="refact_audit_float_equal_compare">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/float_equal_compare.html"/>
+</context>
+<context id="refact_audit_forin">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/forin.html"/>
+</context>
+<context id="refact_audit_generics">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/generics.html"/>
+</context>
+<context id="refact_audit_hidden_field">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/hidden_field.html"/>
+</context>
+<context id="refact_audit_hidden_method">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/hidden_method.html"/>
+</context>
+<context id="refact_audit_integer_division">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/integer_division.html"/>
+</context>
+<context id="refact_audit_loop_condition">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/loop_condition.html"/>
+</context>
+<context id="refact_audit_loop_variable">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/loop_variable.html"/>
+</context>
+<context id="refact_audit_lost_override">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/lost_override.html"/>
+</context>
+<context id="refact_audit_method_body_length">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/method_body_length.html"/>
+</context>
+<context id="refact_audit_method_calls_method">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/method_calls_method.html"/>
+</context>
+<context id="refact_audit_missing_block">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/missing_block.html"/>
+</context>
+<context id="refact_audit_modifier_order">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/modifier_order.html"/>
+</context>
+<context id="refact_audit_nested_block">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/nested_block.html"/>
+</context>
+<context id="refact_audit_not_serializable_super">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/not_serializable_super.html"/>
+</context>
+<context id="refact_audit_numeric_literals">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/numeric_literals.html"/>
+</context>
+<context id="refact_audit_parameter_assignment">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/parameter_assignment.html"/>
+</context>
+<context id="refact_audit_parameter_order">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/parameter_order.html"/>
+</context>
+<context id="refact_audit_pseudo_abstract">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/pseudo_abstract.html"/>
+</context>
+<context id="refact_audit_redundant_boxing">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_boxing.html"/>
+</context>
+<context id="refact_audit_redundant_unboxing">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_unboxing.html"/>
+</context>
+<context id="refact_audit_redundant_cast">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_cast.html"/>
+</context>
+<context id="refact_audit_redundant_instanceof">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_instanceof.html"/>
+</context>
+<context id="refact_audit_redundant_modifiers">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_modifiers.html"/>
+</context>
+<context id="refact_audit_redundant_throws">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/redundant_throws.html"/>
+</context>
+<context id="refact_audit_self_assignments">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/self-assignments.html"/>
+</context>
+<context id="refact_audit_serial_version_uid">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/serial_version_uid.html"/>
+</context>
+<context id="refact_audit_static_access_via_instance">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/static_access_via_instance.html"/>
+</context>
+<context id="refact_audit_staticalizable_methods">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/staticalizable_methods.html"/>
+</context>
+<context id="refact_audit_str_equal_compare">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/str_equal_compare.html"/>
+</context>
+<context id="refact_audit_string_concat_order">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/string_concat_order.html"/>
+</context>
+<context id="refact_audit_switch_default">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/switch_default.html"/>
+</context>
+<context id="refact_audit_switch_fallthrough">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/switch_fallthrough.html"/>
+</context>
+<context id="refact_audit_to_string">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/to_string.html"/>
+</context>
+<context id="refact_audit_unused_assignment">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/unused_assignment.html"/>
+</context>
+<context id="refact_audit_unused_locals">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/unused_locals.html"/>
+</context>
+<context id="refact_audit_unused_imports">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/unused_imports.html"/>
+</context>
+<context id="refact_audit_vars_shading_fields">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/vars_shading_fields.html"/>
+</context>
+<context id="refact_audit_pmd">
+<topic label="RIT" href="help/toolHelp/refactorings/audit/PMD_audit_rules/overview.html"/>
+</context>
+<context id="refact_create_missing_method">
+<topic label="RIT" href="help/toolHelp/refactorings/create_missing_method/overview.html"/>
+</context>
+<context id="refact_where_caught">
+<topic label="RIT" href="help/toolHelp/refactorings/where_caught/overview.html"/>
+</context>
+<context id="refact_call_tree">
+<topic label="RIT" href="help/toolHelp/refactorings/call_tree/overview.html"/>
+</context>
+<context id="report">
+<topic label="RIT" href="help/toolHelp/report/overview.html"/>
+</context>
+<context id="report_formats">
+<topic label="RIT" href="help/toolHelp/report/formats.html"/>
+</context>
+<context id="report_audit">
+<topic label="RIT" href="help/toolHelp/report/audit.html"/>
+</context>
+<context id="report_metrics">
+<topic label="RIT" href="help/toolHelp/report/metrics.html"/>
+</context>
+<context id="report_notused">
+<topic label="RIT" href="help/toolHelp/report/notused.html"/>
+</context>
+<context id="refact_cli">
+<topic label="RIT" href="help/toolHelp/refactorings/command_line_interface/overview.html"/>
+</context>
+<context id="refact_cli_profiles">
+<topic label="RIT" href="help/toolHelp/refactorings/command_line_interface/profiles.html"/>
+</context>
+<context id="refact_cli_switches">
+<topic label="RIT" href="help/toolHelp/refactorings/command_line_interface/switches.html"/>
+</context>
+<context id="refact_cli_antTask">
+<topic label="RIT" href="help/toolHelp/refactorings/command_line_interface/ant_task.html"/>
+</context>
+<context id="refact_preview">
+<topic label="RIT" href="help/toolHelp/refactorings/preview/overview.html"/>
+</context>
+<context id="faq">
+<topic label="RIT" href="help/toolHelp/faq/overview.html"/>
+</context>
+<context id="faq_registration">
+<topic label="RIT" href="help/toolHelp/faq/registration.html"/>
+</context>
+<context id="faq_memory">
+<topic label="RIT" href="help/toolHelp/faq/memory/overview.html"/>
+</context>
+<context id="faq_sourcepath">
+<topic label="RIT" href="help/toolHelp/faq/sourcepath/overview.html"/>
+</context>
+<context id="faq_ref_failing">
+<topic label="RIT" href="help/toolHelp/faq/ref_failing.html"/>
+</context>
+<context id="faq_funct_problems">
+<topic label="RIT" href="help/toolHelp/faq/functionality_problems.html"/>
+</context>
+<context id="faq_thread_dump">
+<topic label="RIT" href="help/toolHelp/faq/thread_dump.html"/>
+</context>
+</contexts>

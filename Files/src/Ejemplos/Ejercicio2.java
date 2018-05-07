@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Ejercicio2 {
 	public static void main(String[] args) throws IOException {
 		int select = 0;
-		String nombre;
+		//String nombre;
 		ArrayList<File> directorios = new ArrayList<File>();
 		File f = File.listRoots()[0];
 		DateFormat formatter;
@@ -89,8 +89,9 @@ public class Ejercicio2 {
 				    	try {
 							ok = true;
 							System.out.println("Introduce nombre de directorio: ");
-							BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-							nombre =  in.readLine();
+							//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+							//nombre1 =  in.readLine();
+							String nombre = new BufferedReader(new InputStreamReader(System.in)).readLine();
 							File fs = fileString(nombre,f);
 							if(!fs.canRead()) {
 				    			System.out.println("No tiene permisos para acceder al directorio: " + directorios.get(select-1));

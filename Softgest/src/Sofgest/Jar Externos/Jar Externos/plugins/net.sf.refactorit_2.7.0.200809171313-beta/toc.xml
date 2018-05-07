@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toc id="refactorit" label="RefactorIT Help" topic="help/toolHelp/manual.html">
+<topic label="Introduction" href="help/toolHelp/intro.html"/>
+<topic label="Refactoring" href="help/toolHelp/refactoring.html"/>
+<topic label="Versions" href="help/toolHelp/versions/overview.html">
+<topic label="Integrated License" href="help/toolHelp/versions/free.html"/>
+</topic>
+<topic label="Getting Started" href="help/toolHelp/getting_started/getting_started.html">
+<topic label="Concepts" href="help/toolHelp/getting_started/concepts.html"/>
+<topic label="RefactorIT Options" href="help/toolHelp/getting_started/refactorit_options.html"/>
+<topic label="Project Settings" href="help/toolHelp/getting_started/project_settings.html"/>
+<topic label="Cache" href="help/toolHelp/getting_started/cache.html"/>
+<topic label="Shortcuts" href="help/toolHelp/getting_started/shortcuts.html"/>
+<topic label="Toolbar Buttons" href="help/toolHelp/getting_started/toolbar.html"/>
+<topic label="RefactorIT Integrations" href="help/toolHelp/getting_started/integrations.html">
+<topic label="Eclipse" href="help/toolHelp/getting_started/eclipse/overview.html"/>
+<topic label="JBuilder" href="help/toolHelp/getting_started/jbuilder/overview.html"/>
+<topic label="JDeveloper" href="help/toolHelp/getting_started/jdev/overview.html"/>
+<topic label="NetBeans or Sun Java Studio" href="help/toolHelp/getting_started/netbeans/overview.html">
+<topic label="Project Settings" href="help/toolHelp/getting_started/netbeans/settings.html"/>
+<topic label="Autodetection of Project Settings" href="help/toolHelp/getting_started/netbeans/autodetect.html"/>
+<topic label="Setting Up a Project" href="help/toolHelp/getting_started/netbeans/project.html"/>
+<topic label="Mounting Source Files for Reference Only" href="help/toolHelp/getting_started/netbeans/sources_for_reference.html"/>
+<topic label="Mounting Javadocs" href="help/toolHelp/getting_started/netbeans/javadocs.html"/>
+<topic label="Version Control System" href="help/toolHelp/getting_started/netbeans/vcs/overview.html">
+<topic label="Troubleshooting" href="help/toolHelp/getting_started/netbeans/vcs/troubleshooting.html"/>
+</topic>
+</topic>
+<topic label="Stand Alone Version" href="help/toolHelp/getting_started/standalone/standalone.html"/>
+</topic>
+<topic label="RefactorIT Updater" href="help/toolHelp/getting_started/refactorit_updater.html"/>
+</topic>
+<topic label="Refactoring Operations" href="help/toolHelp/refactorings/overview.html">
+<topic label="Results Panel" href="help/toolHelp/refactorings/results_panel.html"/>
+<topic label="Undo/Redo" href="help/toolHelp/refactorings/undo.html"/>
+<topic label="Version Control Support" href="help/toolHelp/refactorings/vcs.html"/>
+<topic label="Unicode Support" href="help/toolHelp/refactorings/unicode.html"/>
+<topic label="Add Delegate Methods" href="help/toolHelp/refactorings/add_delegates/overview.html"/>
+<topic label="API Snapshot / API Diff" href="help/toolHelp/refactorings/apids/overview.html"/>
+<topic label="Audit" href="help/toolHelp/refactorings/audit/overview.html">
+<topic label="PMD Audit Rules" href="help/toolHelp/refactorings/audit/PMD_audit_rules/overview.html"/>
+<topic label="Aborted finally blocks" href="help/toolHelp/refactorings/audit/aborted_finally.html"/>
+<topic label="Abstract override" href="help/toolHelp/refactorings/audit/abstract_override.html"/>
+<topic label="Abstract subclass" href="help/toolHelp/refactorings/audit/abstract_subclass.html"/>
+<topic label="Abstruse loop control variables" href="help/toolHelp/refactorings/audit/loop_variable.html"/>
+<topic label="Blockless statements" href="help/toolHelp/refactorings/audit/missing_block.html"/>
+<topic label="Boolean assignment in loop conditions" href="help/toolHelp/refactorings/audit/loop_condition.html"/>
+<topic label="Boolean literals in comparisions" href="help/toolHelp/refactorings/audit/boolean_comparison.html"/>
+<topic label="Dangerous catch clauses" href="help/toolHelp/refactorings/audit/dangerous_catch.html"/>
+<topic label="Dangerous throw statements" href="help/toolHelp/refactorings/audit/dangerous_throw.html"/>
+<topic label="Debug code" href="help/toolHelp/refactorings/audit/debug_code.html"/>
+<topic label="Empty blocks and bodies" href="help/toolHelp/refactorings/audit/empty_blocks.html"/>
+<topic label="Empty statement" href="help/toolHelp/refactorings/audit/empty_statement.html"/>
+<topic label="equals() and hashCode() not paired" href="help/toolHelp/refactorings/audit/equals_hashcode.html"/>
+<topic label="equals() comparing variables of diff. type" href="help/toolHelp/refactorings/audit/equals_on_diff_types.html"/>
+<topic label="Field and variable self-assignments" href="help/toolHelp/refactorings/audit/self-assignments.html"/>
+<topic label="Finalizable local variables and parameters" href="help/toolHelp/refactorings/audit/finalize_locals.html"/>
+<topic label="Finalizable types and methods" href="help/toolHelp/refactorings/audit/finalize_methods.html"/>
+<topic label="Floating point variables equal comparision" href="help/toolHelp/refactorings/audit/float_equal_compare.html"/>
+<topic label="Generics usage" href="help/toolHelp/refactorings/audit/generics.html"/>
+<topic label="Hidden fields" href="help/toolHelp/refactorings/audit/hidden_field.html"/>
+<topic label="Hidden static methods" href="help/toolHelp/refactorings/audit/hidden_method.html"/>
+<topic label="Integer division in floating point context" href="help/toolHelp/refactorings/audit/integer_division.html"/>
+<topic label="Loose nested blocks" href="help/toolHelp/refactorings/audit/nested_block.html"/>
+<topic label="Method body length" href="help/toolHelp/refactorings/audit/method_body_length.html"/>
+<topic label="Methods with single method invocation" href="help/toolHelp/refactorings/audit/method_calls_method.html"/>
+<topic label="Modifier order checker" href="help/toolHelp/refactorings/audit/modifier_order.html"/>
+<topic label="Numeric literals" href="help/toolHelp/refactorings/audit/numeric_literals.html"/>
+<topic label="No serialVersionUID field" href="help/toolHelp/refactorings/audit/serial_version_uid.html"/>
+<topic label="Not serializable superclass" href="help/toolHelp/refactorings/audit/not_serializable_super.html"/>
+<topic label="Parameter order checker" href="help/toolHelp/refactorings/audit/parameter_order.html"/>
+<topic label="Parameter reassignments" href="help/toolHelp/refactorings/audit/parameter_assignment.html"/>
+<topic label="Possible for/in" href="help/toolHelp/refactorings/audit/forin.html"/>
+<topic label="Possible method lost override" href="help/toolHelp/refactorings/audit/lost_override.html"/>
+<topic label="Pseudo abstract class" href="help/toolHelp/refactorings/audit/pseudo_abstract.html"/>
+<topic label="Redundant boxing" href="help/toolHelp/refactorings/audit/redundant_boxing.html"/>
+<topic label="Redundant unboxing" href="help/toolHelp/refactorings/audit/redundant_unboxing.html"/>
+<topic label="Redundant casts expressions" href="help/toolHelp/refactorings/audit/redundant_cast.html"/>
+<topic label="Redundant instanceof expressions" href="help/toolHelp/refactorings/audit/redundant_instanceof.html"/>
+<topic label="Redundant modifiers" href="help/toolHelp/refactorings/audit/redundant_modifiers.html"/>
+<topic label="Redundant throws clauses" href="help/toolHelp/refactorings/audit/redundant_throws.html"/>
+<topic label="Shadowed fields" href="help/toolHelp/refactorings/audit/vars_shading_fields.html"/>
+<topic label="Static member accessed via object reference" href="help/toolHelp/refactorings/audit/static_access_via_instance.html"/>
+<topic label="Staticalizable and finalizable fields" href="help/toolHelp/refactorings/audit/constant_field.html"/>
+<topic label="Staticalizable methods" href="help/toolHelp/refactorings/audit/staticalizable_methods.html"/>
+<topic label="String compared using == and !=" href="help/toolHelp/refactorings/audit/str_equal_compare.html"/>
+<topic label="String concatenation dangerous order" href="help/toolHelp/refactorings/audit/string_concat_order.html"/>
+<topic label="String.toString() conversions" href="help/toolHelp/refactorings/audit/to_string.html"/>
+<topic label="Switch statements without a default case" href="help/toolHelp/refactorings/audit/switch_default.html"/>
+<topic label="Switch statement fallthrough" href="help/toolHelp/refactorings/audit/switch_fallthrough.html"/>
+<topic label="Unused local variables" href="help/toolHelp/refactorings/audit/unused_locals.html"/>
+<topic label="Unused imports" href="help/toolHelp/refactorings/audit/unused_imports.html"/>
+<topic label="Unused variable assignments" href="help/toolHelp/refactorings/audit/unused_assignment.html"/>
+</topic>
+<topic label="Call Tree" href="help/toolHelp/refactorings/call_tree/overview.html"/>
+<topic label="Clean Imports" href="help/toolHelp/refactorings/clean_imports/overview.html"/>
+<topic label="Create Constructor" href="help/toolHelp/refactorings/create_constructor/overview.html">
+<topic label="Example" href="help/toolHelp/refactorings/create_constructor/example.html"/>
+</topic>
+<topic label="Create Factory Method" href="help/toolHelp/refactorings/factory_method/overview.html">
+<topic label="Example" href="help/toolHelp/refactorings/factory_method/example.html"/>
+</topic>
+<topic label="Create Missing Method" href="help/toolHelp/refactorings/create_missing_method/overview.html"/>
+<topic label="Convert Temp To Field" href="help/toolHelp/refactorings/temp_to_field/overview.html"/>
+<topic label="Cross-referenced HTML" href="help/toolHelp/refactorings/cross_referencing_html/overview.html"/>
+<topic label="Dependency Analysis" href="help/toolHelp/refactorings/dependencies/overview.html">
+<topic label="Show Dependencies" href="help/toolHelp/refactorings/dependencies/show_dependencies.html"/>
+<topic label="Draw Dependencies" href="help/toolHelp/refactorings/dependencies/draw_dependencies.html"/>
+<topic label="Limitations" href="help/toolHelp/refactorings/dependencies/limitations.html"/>
+</topic>
+<topic label="Encapsulate Field" href="help/toolHelp/refactorings/encapsulate_field/overview.html"/>
+<topic label="Extract Method" href="help/toolHelp/refactorings/extract_method/overview.html">
+<topic label="Example" href="help/toolHelp/refactorings/extract_method/example.html"/>
+</topic>
+<topic label="Extract Superclass/Interface" href="help/toolHelp/refactorings/extract_super/overview.html">
+<topic label="Extract Interface" href="help/toolHelp/refactorings/extract_super/interface.html"/>
+<topic label="Extract Superclass" href="help/toolHelp/refactorings/extract_super/superclass.html"/>
+</topic>
+<topic label="Find Duplicate Strings" href="help/toolHelp/refactorings/duplicate_strings/overview.html"/>
+<topic label="Fixme Scan" href="help/toolHelp/refactorings/fixme_scanner/overview.html">
+<topic label="Words Scanned" href="help/toolHelp/refactorings/fixme_scanner/words.html"/>
+<topic label="Timestamps" href="help/toolHelp/refactorings/fixme_scanner/timestamps.html"/>
+</topic>
+<topic label="Go to ..." href="help/toolHelp/refactorings/goto_declaration/overview.html"/>
+<topic label="Inline" href="help/toolHelp/refactorings/inline/overview.html"/>
+<topic label="Introduce Explaining Variable" href="help/toolHelp/refactorings/introduce_temp/overview.html"/>
+<topic label="Metrics" href="help/toolHelp/refactorings/metrics/overview.html">
+<topic label="A" href="help/toolHelp/refactorings/metrics/a.html"/>
+<topic label="Ca" href="help/toolHelp/refactorings/metrics/ca.html"/>
+<topic label="CLOC" href="help/toolHelp/refactorings/metrics/cloc.html"/>
+<topic label="CYC" href="help/toolHelp/refactorings/metrics/cyc.html"/>
+<topic label="V(G)" href="help/toolHelp/refactorings/metrics/cyclomatic_complexity.html"/>
+<topic label="DC" href="help/toolHelp/refactorings/metrics/dc.html"/>
+<topic label="DIP" href="help/toolHelp/refactorings/metrics/dip.html"/>
+<topic label="DIT" href="help/toolHelp/refactorings/metrics/dit.html"/>
+<topic label="DCYC" href="help/toolHelp/refactorings/metrics/dcyc.html"/>
+<topic label="D" href="help/toolHelp/refactorings/metrics/d.html"/>
+<topic label="Ce" href="help/toolHelp/refactorings/metrics/ce.html"/>
+<topic label="EP" href="help/toolHelp/refactorings/metrics/ep.html"/>
+<topic label="EXEC" href="help/toolHelp/refactorings/metrics/exec.html"/>
+<topic label="I" href="help/toolHelp/refactorings/metrics/i.html"/>
+<topic label="LSP" href="help/toolHelp/refactorings/metrics/lsp.html"/>
+<topic label="MQ" href="help/toolHelp/refactorings/metrics/mq.html"/>
+<topic label="NCLOC" href="help/toolHelp/refactorings/metrics/ncloc.html"/>
+<topic label="NOTa" href="help/toolHelp/refactorings/metrics/nota.html"/>
+<topic label="NOC" href="help/toolHelp/refactorings/metrics/noc.html"/>
+<topic label="NOTc" href="help/toolHelp/refactorings/metrics/notc.html"/>
+<topic label="NOTe" href="help/toolHelp/refactorings/metrics/note.html"/>
+<topic label="NP" href="help/toolHelp/refactorings/metrics/np.html"/>
+<topic label="NOT" href="help/toolHelp/refactorings/metrics/not.html"/>
+<topic label="RFC" href="help/toolHelp/refactorings/metrics/rfc.html"/>
+<topic label="LOC" href="help/toolHelp/refactorings/metrics/loc.html"/>
+<topic label="WMC" href="help/toolHelp/refactorings/metrics/wmc.html"/>
+</topic>
+<topic label="Minimize Access Rights" href="help/toolHelp/refactorings/min_access/overview.html"/>
+<topic label="Move" href="help/toolHelp/refactorings/move/overview.html">
+<topic label="Move Class" href="help/toolHelp/refactorings/move_type/overview.html"/>
+<topic label="Move Method/Field" href="help/toolHelp/refactorings/move_member/overview.html">
+<topic label="Conflicts" href="help/toolHelp/refactorings/move_member/conflicts.html"/>
+<topic label="Functionality Change" href="help/toolHelp/refactorings/move_member/functionality.html"/>
+</topic>
+</topic>
+<topic label="Not Used" href="help/toolHelp/refactorings/not_used/overview.html">
+<topic label="Filter" href="help/toolHelp/refactorings/not_used/filter.html"/>
+<topic label="Limitations" href="help/toolHelp/refactorings/not_used/limitations.html"/>
+</topic>
+<topic label="Override/Implement Methods" href="help/toolHelp/refactorings/override_methods/overview.html"/>
+<topic label="Pull Up / Push Down" href="help/toolHelp/refactorings/pull_up_push_down/overview.html">
+<topic label="Conflicts" href="help/toolHelp/refactorings/pull_up_push_down/conflicts.html"/>
+</topic>
+<topic label="Rename" href="help/toolHelp/refactorings/rename/overview.html">
+<topic label="Assessing Impact" href="help/toolHelp/refactorings/rename/impact.html"/>
+<topic label="Renaming a Class, or Interface" href="help/toolHelp/refactorings/rename/type.html"/>
+<topic label="Renaming a Field" href="help/toolHelp/refactorings/rename/field.html"/>
+<topic label="Renaming a Method" href="help/toolHelp/refactorings/rename/method.html"/>
+<topic label="Renaming a Package" href="help/toolHelp/refactorings/rename/package.html"/>
+<topic label="Renaming a Parameter, or Local Variable" href="help/toolHelp/refactorings/rename/param_and_local.html"/>
+</topic>
+<topic label="Show JavaDoc" href="help/toolHelp/refactorings/show_javadoc/overview.html"/>
+<topic label="Structure Search" href="help/toolHelp/refactorings/search/overview.html"/>
+<topic label="Subtypes" href="help/toolHelp/refactorings/subtypes/overview.html"/>
+<topic label="Type Info" href="help/toolHelp/refactorings/type_info/overview.html">
+<topic label="Hierarchy Mode" href="help/toolHelp/refactorings/type_info/hierarchy.html"/>
+</topic>
+<topic label="Use Supertype Where Possible" href="help/toolHelp/refactorings/use_supertype/overview.html"/>
+<topic label="Where Caught" href="help/toolHelp/refactorings/where_caught/overview.html"/>
+<topic label="Where Used" href="help/toolHelp/refactorings/where_used/overview.html">
+<topic label="Limitations" href="help/toolHelp/refactorings/where_used/limitations.html"/>
+<topic label="Usages of Fields" href="help/toolHelp/refactorings/where_used/field.html"/>
+<topic label="Usages of Methods" href="help/toolHelp/refactorings/where_used/method.html"/>
+<topic label="Usages of Packages" href="help/toolHelp/refactorings/where_used/package.html"/>
+<topic label="Usages of Parameters and Local Variables" href="help/toolHelp/refactorings/where_used/parameter_and_local.html"/>
+<topic label="Usages of Types" href="help/toolHelp/refactorings/where_used/type.html"/>
+<topic label="Filters" href="help/toolHelp/refactorings/where_used/filters.html">
+<topic label="Usages of Classes" href="help/toolHelp/refactorings/where_used/filter_class.html"/>
+<topic label="Usages of Interfaces" href="help/toolHelp/refactorings/where_used/filter_interface.html"/>
+<topic label="Usages of Non-Private Methods" href="help/toolHelp/refactorings/where_used/filter_method.html"/>
+<topic label="Usages of Constructors and Private Methods" href="help/toolHelp/refactorings/where_used/filter_simple.html"/>
+<topic label="Usages of Packages" href="help/toolHelp/refactorings/where_used/filter_package.html"/>
+<topic label="Usages of Variables" href="help/toolHelp/refactorings/where_used/filter_variable.html"/>
+<topic label="Subtypes and Supertypes" href="help/toolHelp/refactorings/where_used/supertypes_and_subtypes.html"/>
+</topic>
+</topic>
+</topic>
+<topic label="Report generation" href="help/toolHelp/report/overview.html">
+<topic label="Available formats" href="help/toolHelp/report/formats.html"/>
+<topic label="Audit" href="help/toolHelp/report/audit.html"/>
+<topic label="Metrics" href="help/toolHelp/report/metrics.html"/>
+<topic label="Not used" href="help/toolHelp/report/notused.html"/>
+</topic>
+<topic label="Command Line Interface" href="help/toolHelp/refactorings/command_line_interface/overview.html">
+<topic label="Switches" href="help/toolHelp/refactorings/command_line_interface/switches.html"/>
+<topic label="Ant Task" href="help/toolHelp/refactorings/command_line_interface/ant_task.html"/>
+<topic label="Profiles" href="help/toolHelp/refactorings/command_line_interface/profiles.html"/>
+</topic>
+<topic label="Troubleshooting and Tips" href="help/toolHelp/faq/overview.html">
+<topic label="Increasing Memory" href="help/toolHelp/faq/memory/overview.html"/>
+<topic label="Custom Sourcepath" href="help/toolHelp/faq/sourcepath/overview.html"/>
+<topic label="Functionality Problems" href="help/toolHelp/faq/functionality_problems.html"/>
+<topic label="Thread Dump" href="help/toolHelp/faq/thread_dump.html"/>
+<topic label="Registration" href="help/toolHelp/faq/registration.html"/>
+</topic>
+</toc>
