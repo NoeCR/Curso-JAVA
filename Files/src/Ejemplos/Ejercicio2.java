@@ -3,7 +3,9 @@ import java.io.File;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -11,9 +13,12 @@ import java.io.IOException;
 public class Ejercicio2 {
 	public static void main(String[] args) throws IOException {
 		int select = 0;
+		String nombre;
 		ArrayList<File> directorios = new ArrayList<File>();
 		File f = File.listRoots()[0];
-		
+		DateFormat formatter;
+
+		formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, Locale.getDefault());
 		
 
 		do {
@@ -29,10 +34,10 @@ public class Ejercicio2 {
 						String s = comprobarPermisos(e);
 						if(!f.isHidden()) {
 							if(e.isDirectory()) {
-								System.out.println(count + ". - " + s + "/t" + e + "<Directorio>");
+								System.out.println(count + ". - " + s + "\t" +  String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
 								directorios.add(e);
 							}else {
-								System.out.println(count + ". - " + s + "/t" + e +" tamaño: " +e.length() +" Bytes");
+								System.out.println(count + ". - " + s + "\t" +  String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
 								directorios.add(e);
 							}
 						}
@@ -51,7 +56,7 @@ public class Ejercicio2 {
 				do {				
 					try {
 						ok = true;
-						System.out.println("Introduce una opcion (-1 para salir)");
+						System.out.println("Introduce una opcion (-1 para salir) o (-2 para introducir el nombre)");
 						BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 					    select = Integer.parseInt(in.readLine());
 					}catch(java.lang.NumberFormatException nfe) {
@@ -66,7 +71,7 @@ public class Ejercicio2 {
 				    	}else {
 				    		f = f.getParentFile();
 				    	}
-				    }else if(select != -1) {
+				    }else if(select != -1 && select != -2) {
 				    	if(select > directorios.size()) {
 				    		ok = false;
 				    		System.out.println("Opcion ioncorrecta.");
@@ -78,6 +83,27 @@ public class Ejercicio2 {
 				    			f = directorios.get(select -1);
 				    		}
 				    	}
+				    }else if(select == -2) {
+				    	//metodo para comprobar strings y buscar el directorio
+				    	
+				    	try {
+							ok = true;
+							System.out.println("Introduce nombre de directorio: ");
+							BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+							nombre =  in.readLine();
+							File fs = fileString(nombre,f);
+							if(!fs.canRead()) {
+				    			System.out.println("No tiene permisos para acceder al directorio: " + directorios.get(select-1));
+				    			ok = false;
+				    		}else {
+				    			f = fs;
+				    		}
+						}catch(java.lang.StringIndexOutOfBoundsException sbe) {
+							System.out.println("Cadena de texto incorrecta");
+							ok = false;
+						}	
+				    	
+				    	
 				    }
 			}while(!ok);    
 			    
@@ -99,4 +125,27 @@ public class Ejercicio2 {
 			else permisos +="-";
 	return permisos;	
 	}
+	public static File fileString(String s, File f) {
+		boolean direxist = false;
+		for (File e : f.listFiles()){
+            if (!e.isHidden()) {
+                if (e.isDirectory()) {
+                	//System.out.println(e.getName().toLowerCase() + s.toLowerCase());
+                	if((String)e.getName().toLowerCase().trim() == s.toLowerCase().trim()) {
+                		direxist = true;
+                		System.out.println("Encontrado");
+                		return e;
+                	}                		
+                }
+            }
+		}
+		if(!direxist) {
+			System.out.println("Ninguna cadena coincide con el nombre. " + s);
+			return f;
+		}
+		return f;
+	}
+	
 }
+
+
