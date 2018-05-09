@@ -19,7 +19,8 @@ public class Ejercicio2_1 {
         ti.transformaOscuro();
 
         ti.transformaBlancoNegro();
-
+        
+        //ti.getNombreSinExtension();
     }
 
 }

@@ -82,14 +82,38 @@ public class TransformaImagen {
 		 byte[] metadatos = new byte[54];
 		 int nummeta = f_in.read(metadatos);
 		 f_out.write(metadatos);
-		 
+/*			 
+		 byte[] rgb = new byte[3];
+		 int numrgb = f_in.read(rgb);
+		 while(numrgb != -1) {
+			 if(rgb[0] < 0) {
+				 rgb[0] += 256;
+			 }
+			 if(rgb[1] < 0) {
+				 rgb[1] += 256;
+			 }
+			 if(rgb[2] < 0) {
+				 rgb[2] += 256;
+			 }
+			 int media = 
+		 }
+*/		 
 		 int r = f_in.read();
 		 int g = f_in.read();
 		 int b = f_in.read();
 		 
 		 while(b != -1) {
 			 //Proceso ....
-			 int media = (r+g+b/3);
+			 if(r < 0) {
+				 r = r + 256;
+			 }
+			 if(g < 0) {
+				 g = g + 256;
+			 }
+			 if(b < 0) {
+				 b = b + 256;
+			 }
+			 int media = (r+g+b) / 3;
 			 // Escribo
 			 f_out.write(media);
 			 f_out.write(media);
@@ -100,16 +124,17 @@ public class TransformaImagen {
 			 b = f_in.read(); 
 			 
 		 }  				 
-		 
+
+ 
 		 f_in.close();
 		 f_out.close(); 
 
     }
-    private String getNombreSinExtension() {
+    public String getNombreSinExtension() {
 
         //Devuelve el nombre del archivo f sin extensión
-    	
-        
-    	return null;
+    	String nombre = f.getName().substring(0,f.getName().indexOf('.'));
+        //System.out.println(nombre);
+    	return nombre;
     }
 }
