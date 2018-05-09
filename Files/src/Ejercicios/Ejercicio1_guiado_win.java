@@ -1,4 +1,4 @@
-package Ejemplos;
+package Ejercicios;
 import java.io.File;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -35,7 +35,7 @@ public class Ejercicio1_guiado_win {
 				   }else if(opcion != -1) {
 					   if(opcion > directorios.size()) {
 						   ok = false;
-						   System.out.println("Opcion incorrecta. Valores válidos entre el 0 y " + directorios.size());
+						   System.out.println("Opcion incorrecta. Valores vï¿½lidos entre el 0 y " + directorios.size());
 					   }else {
 						   if(!directorios.get(opcion-1).canRead()) {
 							   System.out.println("No tiene permisos para acceder al directorio: " + directorios.get(opcion-1));
