@@ -1,4 +1,4 @@
-package Ejemplos;
+package Tema_3;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;

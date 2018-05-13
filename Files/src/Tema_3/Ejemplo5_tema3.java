@@ -1,4 +1,4 @@
-package Ejemplos;
+package Tema_3;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Scanner;
