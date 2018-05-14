@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,13 +19,13 @@ public class LeerXML2 {
                     IOException, 
                     SAXException {
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("./archivos/coches.xml");
-        Element root = doc.getDocumentElement(); // apuntarà al elemento raíz
+        Element root = doc.getDocumentElement(); // apuntarï¿½ al elemento raï¿½z
         NodeList hijos = root.getChildNodes();
         System.out.println(hijos.item(0).getNodeName()); // el primer hijo es el retorno de carro.
-        System.out.println(hijos.item(1).getNodeName()); // el segundo hijo sí que és vehiculo
+        System.out.println(hijos.item(1).getNodeName()); // el segundo hijo sï¿½ que ï¿½s vehiculo
         System.out.println(hijos.item(2).getNodeName()); // el tercer hijo es el retorno de carro.
-        System.out.println(hijos.item(3).getNodeName()); // el cuarto hijo sí que és vehiculo
+        System.out.println(hijos.item(3).getNodeName()); // el cuarto hijo sï¿½ que ï¿½s vehiculo
         System.out.println(hijos.item(4).getNodeName()); // el quinto hijo es el retorno de carro.
-        System.out.println(hijos.item(5).getNodeName()); // no existe el sexto hijo. Dará error
+        System.out.println(hijos.item(5).getNodeName()); // no existe el sexto hijo. Darï¿½ error
     }
 }

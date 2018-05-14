@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.FileInputStream;
@@ -23,7 +23,7 @@ public class LeerXMLCoches {
 			Element el = (Element) vehiculos.item(i);
 			System.out.println(el.getNodeName() + " " + (i + 1));
 			System.out.println("Marca: " + el.getElementsByTagName("marca").item(0).getChildNodes().item(0).getNodeValue());
-			System.out.println("Matrícula: " + el.getElementsByTagName("matricula").item(0).getFirstChild().getNodeValue());
+			System.out.println("Matricula: " + el.getElementsByTagName("matricula").item(0).getFirstChild().getNodeValue());
 			System.out.println("Motor: " + el.getElementsByTagName("motor").item(0).getTextContent());
 			System.out.println("Combustible: " + el.getElementsByTagName("motor").item(0).getAttributes().item(0).getNodeValue());
 			Element m = (Element) el.getElementsByTagName("motor").item(0);

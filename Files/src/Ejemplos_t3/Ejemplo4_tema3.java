@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;

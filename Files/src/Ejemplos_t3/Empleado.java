@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 import java.io.Serializable;
 
 public class Empleado implements Serializable {
@@ -21,7 +21,7 @@ public class Empleado implements Serializable {
 		this.departamento = departamento;
 		this.edad = edad;
 		this.sueldo = sueldo;
-
+		
 	}
 
 	public int getNum(){
@@ -42,5 +42,9 @@ public class Empleado implements Serializable {
 
 	public double getSueldo(){
 		return this.sueldo;
+	}
+	public void display() {
+		
+		System.out.println("Número: " + num + "\n" + "Nombre: " + nombre +  "\n" + "Departamento: " +departamento + "\n"+ "Edad: " + edad + "\n" +"Sueldo: " + sueldo);
 	}
 }

@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,7 +9,7 @@ public class Ejemplo6_tema2 {
 		
 		DataOutputStream f = new DataOutputStream(new FileOutputStream("./archivos/Empleados3.dat"));
 		
-		String[] nombres = {"Andreu    ", "Bernat    ", "Claudia   " , "Damián    " , "Juan      "};
+		String[] nombres = {"Andreu    ", "Bernat    ", "Claudia   " , "Damiï¿½n    " , "Juan      "};
 		int[] Departamentos = {10,20,10,10,10};
 		int[] edades  = {32,28,26,40,30};
 		double[] sueldos = {1000.0,1200.0,1400.0,1300.0,1200.00};

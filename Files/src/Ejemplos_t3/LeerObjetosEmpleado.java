@@ -1,4 +1,4 @@
-package Tema_3;
+package Ejemplos_t3;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class LeerObjetosEmpleado {
 		try {
 			while(true) {
 				e = (Empleado) f.readObject();
-				System.out.println("Número: " + e.getNum());
+				System.out.println("NÃºmero: " + e.getNum());
 				System.out.println("Nombre: " + e.getNombre());
 				System.out.println("departamentos: " + e.getDepartamento());
 				System.out.println("Edad: " + e.getEdad());

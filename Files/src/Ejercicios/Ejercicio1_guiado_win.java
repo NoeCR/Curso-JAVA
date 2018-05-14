@@ -47,8 +47,8 @@ public class Ejercicio1_guiado_win {
 				   }				   
 			   }catch(NumberFormatException nfe) {
 				   f = fileString(in,f);
-				   if(f == null) {
-					   
+				   if(f != null) {
+					   System.out.println("Copntinua el programa");
 				   }else {
 					   System.out.println("Error en los datos de entrada" + nfe.getMessage());
 				   }			   
@@ -106,7 +106,8 @@ public class Ejercicio1_guiado_win {
             if (!e.isHidden()) {
                 if (e.isDirectory()) {
                 	//System.out.println(e.getName().toLowerCase() + s.toLowerCase());
-                	if((String)e.getName().toLowerCase().trim() == s.toLowerCase().trim()) {
+                	
+                	if(e.getName().toLowerCase().trim().equals(s.toLowerCase().trim())) {
                 		direxist = true;
                 		System.out.println("Encontrado");
                 		return e;
