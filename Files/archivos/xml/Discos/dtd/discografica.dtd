@@ -1,0 +1,22 @@
+<!-- Noé Cruz Rodríguez-->
+<!ELEMENT discografica (disco+)>
+	<!ELEMENT disco (textcontent, extracontent)>
+		<!ELEMENT textcontent (codigo_EAN, autor, titulo, genero, estreno, sello_disco, canciones)>
+			<!ELEMENT codigo_EAN (#PCDATA)>
+			<!ELEMENT autor (#PCDATA)>
+			<!ELEMENT titulo (#PCDATA)>
+			<!ELEMENT genero (#PCDATA)>
+			<!ELEMENT estreno (#PCDATA)>
+			<!ELEMENT sello_disco (#PCDATA)>
+			<!ELEMENT canciones (cancion+)>
+				<!ELEMENT cancion (#PCDATA)>
+		<!ELEMENT extracontent (imagen, informacion)>
+			<!ELEMENT imagen  EMPTY>
+				<!ATTLIST imagen autor ID #REQUIRED>
+			<!ELEMENT informacion (#PCDATA)>
+				<!ATTLIST informacion artista ID #REQUIRED>
+
+
+
+
+

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coches SYSTEM "dtd/coches.dtd">
+<?xml-stylesheet type="text/css" href="css/coches.css"?>
+<!-- Noé Cruz Rodrígiez -->
+<coches>
+  <vehiculo modelo="coche1">
+    <marca>Ferrari</marca>
+	<especs>
+		<modelo color="rojo">488 GTB</modelo>
+		<motor combustible="gasolina">Motor V8</motor>
+		<matricula>MASTER</matricula>
+		<potencia>670 CV (492 kW)</potencia>
+		<aceleracion>3.0 sec 0-100km/h</aceleracion>
+		<rendimiento>172 cv/l</rendimiento>
+		<extra valor="350">Rojo metalizado</extra>
+		<extra valor="200">llantas</extra>
+	</especs>
+    <imagen coche="ferrari" />
+  </vehiculo>
+
+  <vehiculo modelo="coche2">
+    <marca>Lamborghini</marca>
+	<especs>
+		<modelo color="gris">VENENO</modelo>
+		<motor combustible="diesel">V12, 60°, MPI (Multi Point Injection)</motor>
+		<matricula>FKR007</matricula>
+		<potencia>750 CV (552 kW) @ 8.400 rpm</potencia>
+		<aceleracion>2,9 sec 355 km/h (221 mph)</aceleracion>
+		<rendimiento>1,99 kg/CV (4.35 lb/CV)</rendimiento>
+		<extra valor="280">equipo sonido</extra>
+		<extra valor="200">llantas</extra>
+	</especs>
+	<imagen coche="lambo" />
+  </vehiculo>
+
+  <vehiculo modelo="coche3">
+    <marca>Porsche</marca>
+	<especs>
+		<modelo color="gris">911 Turbo S</modelo>
+		<motor combustible="gasolina">Trasero V6</motor>
+		<matricula>PQN7942</matricula>
+		<potencia>427 kW (580 CV) a 6.750 1/min</potencia>
+		<aceleracion>2,9 s con Sport + 330 km/h</aceleracion>
+		<rendimiento>Emisiones CO2 en g/km</rendimiento>
+		<extra valor="300">climatizador</extra>
+		<extra valor="250">llantas</extra>
+	</especs>
+	<imagen coche="posche" />
+  </vehiculo>
+  
+    <vehiculo modelo="coche4">
+    <marca>Mercedes</marca>
+	<especs>
+		<modelo color="gris">AMG GT Roadster</modelo>
+		<motor combustible="gasolina">motor V8 biturbo de 4.0 litros</motor>
+		<matricula>MZ69ZM</matricula>
+		<potencia>557 CV</potencia>
+		<aceleracion>3,6 sec Vmax 318 km/h.</aceleracion>
+		<rendimiento>172 cv/l</rendimiento>
+		<extra valor="300">Descapotable</extra>
+		<extra valor="250">llantas</extra>
+	</especs>
+	<imagen coche="mercedes" />
+  </vehiculo>
+</coches>

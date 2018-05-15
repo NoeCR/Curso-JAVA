@@ -1,0 +1,233 @@
+/** <!-- Noé Cruz Rodrígiez --> **/
+@font-face {
+font-family: NFS;
+src: url(../src/NFS.ttf);
+}
+coches{
+	background-image: url(../img/fondo1.jpg);
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	cursor: url(puntero.svg);
+}
+vehiculo[modelo="coche1"]{
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 600px;
+	height: 300px;
+	background-image: url(../img/div2.jpg);
+	border-top-left-radius: 15px;
+	z-index: 1;
+	-webkit-transition: width 1s, background 1s;
+    -moz-transition: width 1s, background 1s;
+    -o-transition: width 1s, background 1s;
+    transition: width 1s, background 1s;
+	box-shadow: 0 0 15px #000;
+}
+vehiculo[modelo="coche1"]:hover{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 10;
+}
+vehiculo[modelo="coche2"]{
+	position: absolute;
+	top: 240px;
+	left: 240px;
+	width: 600px;
+	height: 300px;
+	background-image: url(../img/div2.jpg);
+	border-top-left-radius: 15px;
+	z-index: 2;
+	-webkit-transition: width 1s, background 1s;
+    -moz-transition: width 1s, background 1s;
+    -o-transition: width 1s, background 1s;
+    transition: width 1s, background 1s;
+	box-shadow: 0 0 15px #000;
+}
+vehiculo[modelo="coche2"]:hover{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 10;
+}
+vehiculo[modelo="coche3"]{
+	position: absolute;
+	top: 280px;
+	left: 280px;
+	width: 600px;
+	height: 300px;
+	background-image: url(../img/div2.jpg);
+	border-top-left-radius: 15px;
+	z-index: 3;
+	-webkit-transition: width 1s, background 1s;
+    -moz-transition: width 1s, background 1s;
+    -o-transition: width 1s, background 1s;
+    transition: width 1s, background 1s;
+	box-shadow: 0 0 15px #000;
+}
+vehiculo[modelo="coche3"]:hover{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 10;
+}
+vehiculo[modelo="coche4"]{
+	position: absolute;
+	top: 320px;
+	left: 320px;
+	width: 600px;
+	height: 300px;
+	background-image: url(../img/div2.jpg);
+	border-top-left-radius: 15px;
+	z-index: 3;
+	-webkit-transition: width 0.5s, background 0.5s;
+    -moz-transition: width 0.5s, background 0.5s;
+    -o-transition: width 0.5s, background 0.5s;
+    transition: width 0.5s, background 0.5s;
+	box-shadow: 0 0 15px #000;
+}
+vehiculo[modelo="coche4"]:hover{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 10;
+}
+marca{
+	display: block;
+	margin: 15px;
+	font-family: NFS;
+}
+especs{
+	display: block;
+	margin: 15px;
+	z-index: 1;
+}
+modelo{
+	display: block;
+	margin-left: 15px;
+	font-family: NFS;
+}
+modelo:before{
+	content: "Modelo. ";
+}
+motor{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+}
+matricula{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+}
+potencia{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+}
+aceleracion{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+}
+rendimiento{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+}
+extra{
+	display: block;
+	margin-left: 15px;
+	z-index: 1;
+	font-style: italic;
+}	
+imagen[coche="ferrari"]{
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-top: -150px;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, background 0.5s;
+    -moz-transition: opacity 0.5s, background 0.5s;
+    -o-transition: opacity 0.5s, background 0.5s;
+    transition: opacity 0.5s, background 0.5s;
+	z-index: 10;
+}
+imagen[coche="ferrari"]:hover{
+	width: 790px;
+	height: 273px;
+	background-image: url(../img/fer.jpg);
+	opacity: 1;
+	z-index: 10;
+}
+imagen[coche="lambo"]{
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-top: -150px;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, background 0.5s;
+    -moz-transition: opacity 0.5s, background 0.5s;
+    -o-transition: opacity 0.5s, background 0.5s;
+    transition: opacity 0.5s, background 0.5s;
+	z-index: 10;
+}
+imagen[coche="lambo"]:hover{
+	width: 790px;
+	height: 273px;
+	background-image: url(../img/lambo2.jpg);
+	opacity: 1;
+	z-index: 10;
+}
+imagen[coche="posche"]{
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-top: -150px;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, background 0.5s;
+    -moz-transition: opacity 0.5s, background 0.5s;
+    -o-transition: opacity 0.5s, background 0.5s;
+    transition: opacity 0.5s, background 0.5s;
+	z-index: 10;
+}
+imagen[coche="posche"]:hover{
+	width: 790px;
+	height: 273px;
+	background-image: url(../img/por.jpg);
+	opacity: 1;
+	z-index: 10;
+}
+imagen[coche="mercedes"]{
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-top: -150px;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, background 0.5s;
+    -moz-transition: opacity 0.5s, background 0.5s;
+    -o-transition: opacity 0.5s, background 0.5s;
+    transition: opacity 0.5s, background 0.5s;
+	z-index: 10;
+}
+imagen[coche="mercedes"]:hover{
+	width: 790px;
+	height: 264px;
+	background-image: url(../img/mer.jpg);
+	opacity: 1;
+	z-index: 10;
+}

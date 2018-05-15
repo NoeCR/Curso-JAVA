@@ -3,7 +3,7 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Ejemplo6_tema2 {
+public class Ejemplo6_tema3 {
 
 	public static void main(String[] args) throws IOException{
 		

@@ -1,0 +1,137 @@
+/** <!-- Noé Cruz Rodrígiez --> **/
+@font-face {
+font-family: street;
+src: url(../src/street.ttf);
+}
+discografica{
+	background-image: url(../img/fondoi.png);
+    background-color: #cccccc;
+	display: block;
+	width: 100%;
+}
+disco{
+	display: flex;
+	flex-flow: row wrap;
+	background-color: rgba(201, 76, 76, 0.5);
+	color: white;
+	justify-content: center;
+	width: 80%;
+	height: auto;
+	text-indent: 2em;
+	justify-content: center;	
+	margin: 20px auto;
+	padding: 5px;
+}
+textcontent{
+	display: flex;
+	flex-flow: column wrap;
+	width: 50%;
+}
+extracontent{
+	display: flex;
+	flex-flow: column wrap;
+	width: 50%;
+	justify-content: center;
+	padding-bottom: 5px;
+}
+codigo_EAN{
+	display: block;
+}
+codigo_EAN:before{
+	content: "EAN.";
+}
+autor{
+	display: block;
+	font-family: street;
+	font-size: 32px;
+	line-height: 1.5em;
+}
+titulo{
+	display: block;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 17px;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+	font-style: italic;
+}
+titulo:before{
+	content: "Disco.";
+}
+genero{
+	display: block;
+}
+estreno{
+	display: block;
+}
+estreno:before{
+	content: "Fecha de publicación. ";
+}
+sello_disco{
+	display: block;
+}
+sello_disco:before{
+	content: "Sello Discográfico. ";
+}
+informacion[artista="nachinfo"]{
+	width: 400px;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 0 15px #fff;
+}
+informacion[artista="sfdkinfo"]{
+	width: 400px;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 0 15px #fff;
+}
+informacion[artista="kaseinfo"]{
+	width: 400px;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 25px;
+	box-shadow: 0 0 15px #fff;
+}		
+canciones{
+	display: block;
+}
+canciones:before{
+	content: "Tracks. ";
+	display: block;
+}
+cancion{
+	display: block;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+	font-style: italic;
+}
+cancion:before{
+	content: url(../img/icono10.png);
+	margin-right: 5px;
+}
+imagen[autor="nach"]{
+	background-image: url(../img/nach3.jpg);
+	width: 300px;
+	height: 300px;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	opacity: 0.75;
+}
+imagen[autor="sfdk"]{
+	background-image: url(../img/sfdk2.jpg);
+	width: 400px;
+	height: 225px;
+	margin-left: 2.5%;
+	margin-bottom: 10px;
+	opacity: 1;
+}
+imagen[autor="kase"]{
+	background-image: url(../img/kase2.png);
+	width: 300px;
+	height: 270px;
+	margin-left: 9%;
+	opacity: 1;
+	z-index: 1;
+}

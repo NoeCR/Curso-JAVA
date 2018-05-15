@@ -1,0 +1,19 @@
+<!-- Noé Cruz Rodríguez-->
+<!ELEMENT coches (vehiculo+)>
+	<!ELEMENT vehiculo (marca, especs, imagen)>
+		<!ATTLIST vehiculo modelo ID #REQUIRED>
+	<!ELEMENT marca (#PCDATA)>
+	<!ELEMENT especs (modelo, motor, matricula, potencia, aceleracion, rendimiento, extra*)>
+ 	<!ELEMENT modelo (#PCDATA)>
+        <!ATTLIST modelo color CDATA #IMPLIED>
+	<!ELEMENT motor (#PCDATA)>
+        <!ATTLIST motor combustible CDATA #REQUIRED>
+	<!ELEMENT matricula (#PCDATA)>
+	<!ELEMENT potencia (#PCDATA)>
+    <!ELEMENT aceleracion (#PCDATA)>
+    <!ELEMENT rendimiento (#PCDATA)>
+	<!ELEMENT extra (#PCDATA)>
+    	<!ATTLIST extra valor NMTOKEN #REQUIRED>
+	<!ELEMENT imagen  EMPTY>
+		<!ATTLIST imagen coche ID #REQUIRED>
+

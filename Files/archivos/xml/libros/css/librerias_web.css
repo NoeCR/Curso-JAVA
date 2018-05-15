@@ -1,0 +1,157 @@
+/**   <!-- Noé Cruz Rodrígiez -->    **/
+librerias_web{
+	background-image: url(../img/fondo2.jpg);
+	color: #34495e;
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	display: flex;
+	
+}
+libreria{
+	display: flex;
+	flex-flow: row wrap;
+	align-items:  center;
+	justify-content: space-around;
+	width: 80%;
+	margin: auto;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+libro{
+	display: flex;
+	flex-flow: row wrap;
+	align-items:  stretch;
+	width: 50%;
+	height: auto;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 10px;
+	color: white;
+	padding: 5px;
+}
+contenido{
+	  width: 70%;
+      height: auto;
+      margin-top: 5px;
+	  padding: 5px;	
+
+}
+codigo_ISBN{
+	display: block;
+	line-height: 200%;
+}
+codigo_ISBN:before{
+	content: "ISBN. ";
+}
+imagen:hover{
+	visibility: visible !important;
+	visibility: hidden;
+}	
+titulo{
+	display: block;	
+	font-size: 17px;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+	font-style: italic;
+}
+titulo:before{
+	content: "Titulo. ";
+}
+materia{
+	display: block;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 17px;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+}
+materia:before{
+	content: "Nivel. ";
+}
+autores{
+	display: block;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 17px;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+}
+autores:before{
+	content: "Autores. ";
+}
+editorial{
+	display: block;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 17px;
+	text-shadow: 1px 1px 8px rgba(62, 37, 39, 1);
+}
+editorial:before{
+	content: "Editorial. ";
+}
+fecha{
+	display: block;
+	line-height: 200%;
+}
+fecha:before{
+	content: "Fecha de publicación. ";
+}
+precio{
+	display: block;
+}
+precio:before{
+	content: "Precio. ";
+}
+imagen[autor="paul"]{
+	background-image: url(../img/paul1.jpg);
+	width: 90px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="ken"]{
+	background-image: url(../img/ken.png);
+	width: 85px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="almu"]{
+	background-image: url(../img/almudena.jpg);
+	width: 90px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="dan"]{
+	background-image: url(../img/dan.png);
+	width: 90px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="isb"]{
+	background-image: url(../img/isabel.jpg);
+	width: 90px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="rom"]{
+	background-image: url(../img/romancero.jpg);
+	width: 90px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="steve"]{
+	background-image: url(../img/steve.jpg);
+	width: 86px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}
+imagen[autor="javier"]{
+	background-image: url(../img/javier.jpg);
+	width: 86px;
+	height: 140px;
+	margin-top: 5px;
+	padding: 5px;
+}

@@ -1,0 +1,21 @@
+<!--Noé Cruz Rodríguez-->
+<!ELEMENT librerias_web (libreria+)>
+	<!ELEMENT libreria (libro+)>
+		<!ELEMENT libro (contenido, imagen)>
+			<!ELEMENT contenido (codigo_ISBN, titulo, materia, autores, editorial, fecha, precio)>
+			<!ATTLIST contenido tipo CDATA #IMPLIED>
+				<!ELEMENT codigo_ISBN (#PCDATA)>
+				<!ELEMENT titulo (#PCDATA)>
+				<!ELEMENT materia (#PCDATA)>
+					<!ATTLIST materia nivel CDATA #IMPLIED>
+				<!ELEMENT autores (#PCDATA)>
+				<!ELEMENT editorial (#PCDATA)>
+				<!ELEMENT fecha (#PCDATA)>
+				<!ELEMENT precio (#PCDATA)>
+					<!ATTLIST precio moneda NMTOKEN #REQUIRED>
+			<!ELEMENT imagen  EMPTY>
+				<!ATTLIST imagen autor ID #REQUIRED>
+	
+	
+	
+	

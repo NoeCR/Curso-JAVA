@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE librerias_web SYSTEM "dtd/librerias_web.dtd">
+<?xml-stylesheet type="text/css" href="css/librerias_web.css"?>
+<!-- Noé Cruz Rodrígiez -->
+<librerias_web>
+  <libreria>	  	
+      <libro>
+			<contenido tipo="texto">
+			  <codigo_ISBN>9788432232893</codigo_ISBN>
+			  <titulo>4 3 2 1</titulo>
+			  <materia nivel="basico,medio,avanzado">basico</materia>
+			  <autores>PAUL AUSTER</autores>
+			  <editorial>Seix Barral</editorial>
+			  <fecha>2017</fecha>
+			  <precio moneda="Euro">22.70 € </precio>
+			</contenido>  
+			<imagen autor="paul"/>
+      </libro>	 
+	  <libro> 
+			<contenido tipo="texto">
+			  <codigo_ISBN>9788401018251</codigo_ISBN>
+			  <titulo>Una columna de fuego</titulo>
+			  <materia nivel="basico,medio,avanzado">medio</materia>
+			  <autores>KEN FOLLETT</autores>
+			  <editorial><![CDATA[<Plaza & Janes Editores>]]></editorial>
+			  <fecha>2017</fecha>
+			  <precio moneda="Euro">23.65 € </precio>
+			</contenido>
+			<imagen autor="ken"/>
+      </libro>
+		<libro>
+			<contenido tipo="texto">
+			  <codigo_ISBN>2910020869502</codigo_ISBN>
+			  <titulo>Los pacientes del doctor garcia</titulo>
+			  <materia nivel="basico,medio,avanzado">avanzado</materia>
+			  <autores>ALMUDENA GRANDES</autores>
+			  <editorial>Tusquets Editores</editorial>
+			  <fecha>2017</fecha>
+			  <precio moneda="Euro">21.75 €</precio>
+		  </contenido>
+		  <imagen autor="almu"/>
+		</libro>
+		<libro>
+			<contenido tipo="texto">
+			  <codigo_ISBN>9788483468746</codigo_ISBN>
+			  <titulo>La tienda</titulo>
+			  <materia nivel="basico,medio,avanzado">avanzado</materia>
+			  <autores>KING, STEPHEN</autores>
+			  <editorial>Ediciones B</editorial>
+			  <fecha>2005</fecha>
+			  <precio moneda="Euro">11.95 €</precio>
+		  </contenido>
+		  <imagen autor="steve"/>
+		</libro>		
+  </libreria>
+  
+  <libreria>
+    <libro>
+		<contenido tipo="texto">
+		  <codigo_ISBN>9788408176039 </codigo_ISBN>
+		  <titulo>Inferno</titulo>
+		  <materia nivel="basico,medio,avanzado">basico</materia>
+		  <autores>DAN BROWN</autores>
+		  <editorial>Editorial Planeta</editorial>
+		  <fecha>2017</fecha>
+		  <precio moneda="Euro"> 9.95 €</precio>
+		</contenido>
+		<imagen autor="dan"/>	
+    </libro>
+    <libro>
+		<contenido tipo="texto">	
+		  <codigo_ISBN>9788467033816</codigo_ISBN>  
+		  <titulo>La casa de los espíritus</titulo>
+		  <materia nivel="basico,medio,avanzado">medio</materia>
+		  <autores>ISABEL ALLENDE</autores>
+		  <editorial>Austral</editorial>
+		  <fecha>2010</fecha>
+		  <precio moneda="Euro">8.95€</precio>
+		</contenido>
+		<imagen autor="isb"/>
+    </libro>
+    <libro>
+		<contenido tipo="texto"> 
+		  <codigo_ISBN>9788467036152</codigo_ISBN>
+		  <titulo>Romancero gitano</titulo>
+		  <materia nivel="basico,medio,avanzado">avanzado</materia>
+		  <autores>FEDERICO GARCIA LORCA</autores>
+		  <editorial>Austral</editorial>
+		  <fecha>2000</fecha>
+		  <precio moneda="Euro">8.95€</precio>
+		</contenido>
+		 <imagen autor="rom"/>
+    </libro>
+		<libro>
+			<contenido tipo="texto">
+			  <codigo_ISBN>9788408178941</codigo_ISBN>
+			  <titulo>El fuego invisible</titulo>
+			  <materia nivel="basico,medio,avanzado">avanzado</materia>
+			  <autores>JAVIER SIERRA </autores>
+			  <editorial>Planeta</editorial>
+			  <fecha>2017</fecha>
+			  <precio moneda="Euro">11.95 €</precio>
+		  </contenido>
+		  <imagen autor="javier"/>
+		</libro>
+  </libreria>
+</librerias_web>
