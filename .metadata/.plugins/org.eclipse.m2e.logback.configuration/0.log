@@ -559,3 +559,4 @@ org.eclipse.jdt.core.JavaModelException: bin/Ejercicios [in 1er_Trimestre] no es
 2018-05-13 18:13:38,453 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2018-05-14 16:09:49,574 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-05-15 18:07:03,440 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-05-16 12:05:04,447 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

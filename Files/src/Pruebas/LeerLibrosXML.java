@@ -33,7 +33,7 @@ public class LeerLibrosXML {
 			for (int j = 0; j<numcan.getLength(); j++) {
 				Element cn = (Element) numcan.item(j);
 				//System.out.println(cn.getNodeName() + " " + (j + 1) );
-				System.out.println("Cancion " + (j+1) + ": "+ cn.getTextContent());
+				System.out.println("Cancion " + (j+1) + ": "+ cn.getFirstChild().getNodeValue());
 				//System.out.println(cn.getTextContent());
 			}
 		}
