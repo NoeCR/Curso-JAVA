@@ -3,13 +3,13 @@ import java.io.Serializable;
 
 public class Empleado implements Serializable {
 
-	private static final long serialVersionUID = 2L;
+	private static final long serialVersionUID = 1L;
 	private int num=0;
 	private String nombre=null;
 	private int departamento=0;
 	private int edad=0;
 	private double sueldo=0.0;
-	private String localidad = null;
+	//private String localidad = null;
 
 	public Empleado(){
 	}

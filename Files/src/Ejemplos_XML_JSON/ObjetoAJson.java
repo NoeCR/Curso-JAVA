@@ -31,6 +31,7 @@ public class ObjetoAJson {
 			while (true) {
 				// mientras haya posts
 				p = (Post) f.readObject();
+				
 				//Convertirlo en una cadena json válida
 				jsonPosts += "{"
 							+ "\"from\":\""  + p.getFrom() + "\","
