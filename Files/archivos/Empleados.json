@@ -1,0 +1,63 @@
+{ "empresa":
+
+   { "empleado":
+
+     [  {
+
+           "num": "1",
+
+           "nombre": "Andreu",
+
+           "departamento": "10",
+
+           "edad": "32",
+
+           "sueldo": "1000.0"
+
+        },
+
+        {
+
+           "num": "2",
+
+           "nombre": "Bernat",
+
+           "departamento": "20",
+
+           "edad": "28",
+
+           "sueldo": "1200.0"
+
+        },
+
+        {
+
+           "num": "3",
+
+           "nombre": "Claudia",
+
+           "departamento": "10",
+
+           "edad": "26",
+
+           "sueldo": "1400.0"
+
+        },
+
+        {
+
+           "num": "4",
+
+           "nombre": "Damián",
+
+           "departamento": "10",
+
+           "edad": "40",
+
+           "sueldo": "1300.0"
+
+        }
+
+     ]
+
+   }

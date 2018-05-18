@@ -59,8 +59,7 @@ public class CrearEmpleadosXML {
 		}catch(EOFException eof) {
 			f.close();
 		}
-		Transformer trans = TransformerFactory.newInstance().newTransformer();
-		
+		Transformer trans = TransformerFactory.newInstance().newTransformer();		
 		DOMSource source = new DOMSource(doc);
 		StreamResult result = new StreamResult(new FileOutputStream("./archivos/Empleados.xml"));
 		
