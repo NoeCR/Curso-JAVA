@@ -4,13 +4,12 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-
-
 import java.io.FileWriter;
 import java.io.Writer;
-import java.lang.reflect.Type;
+
 import java.util.List;
 
+import java.lang.reflect.Type;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

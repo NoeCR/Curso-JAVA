@@ -1,0 +1,1 @@
+Esto es un array de caracteres con caracteres raros: á ç ñ

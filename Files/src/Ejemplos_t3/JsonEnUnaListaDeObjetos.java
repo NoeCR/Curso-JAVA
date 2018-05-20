@@ -17,5 +17,8 @@ public class JsonEnUnaListaDeObjetos {
 		
 		final Type tipoListaEmpleados = new TypeToken<List<Empleado>>() {}.getType();
 		final List<Empleado> empleados = gson.fromJson(empleadosJSON, tipoListaEmpleados);
+		for (Empleado emp: empleados) {
+			emp.display();
+		}
 	}
 }

@@ -1,0 +1,1 @@
+Esto es un archivo con caracteres raros: é & ç à

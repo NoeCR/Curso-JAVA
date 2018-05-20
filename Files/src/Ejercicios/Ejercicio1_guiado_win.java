@@ -49,6 +49,7 @@ public class Ejercicio1_guiado_win {
 				   f = fileString(in,f);
 				   if(f != null) {
 					   System.out.println("Copntinua el programa");
+					   
 				   }else {
 					   System.out.println("Error en los datos de entrada" + nfe.getMessage());
 				   }			   
@@ -104,9 +105,7 @@ public class Ejercicio1_guiado_win {
 		boolean direxist = false;
 		for (File e : f.listFiles()){
             if (!e.isHidden()) {
-                if (e.isDirectory()) {
-                	//System.out.println(e.getName().toLowerCase() + s.toLowerCase());
-                	
+                if (e.isDirectory()) {                	
                 	if(e.getName().toLowerCase().trim().equals(s.toLowerCase().trim())) {
                 		direxist = true;
                 		System.out.println("Encontrado");
