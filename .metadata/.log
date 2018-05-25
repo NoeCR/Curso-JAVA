@@ -1757,3 +1757,27 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-25 16:08:48.874
 !MESSAGE No repository found at jar:file:/C:/Users/Noe/Downloads/BabelLanguagePack-eclipse-es_4.5.0.v20170819095801.zip!/.
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-05-25 20:17:41.551
+!MESSAGE Checkout conflict with files: 
+2-Evaluacion
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+2-Evaluacion
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:434)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:354)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:200)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:232)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:176)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.access$0(PullOperationUI.java:168)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.runInWorkspace(PullOperationUI.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+2-Evaluacion
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:516)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:484)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:380)
+	... 10 more
