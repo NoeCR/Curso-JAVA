@@ -54,6 +54,7 @@ public class TheSerializer extends JFrame {
 	private JTextArea textArea;
 	private JTextArea textArea_1;
 	private File f = null;
+	private static JPanel auxPanel;
 	/**
 	 * Launch the application.
 	 */
@@ -93,8 +94,8 @@ public class TheSerializer extends JFrame {
 				JFileChooser selectorArchivos = new JFileChooser();
 				selectorArchivos.setCurrentDirectory(new File("./archivos"));
 				selectorArchivos.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-				int resultado = selectorArchivos.showOpenDialog(panel);
-				f = selectorArchivos.getSelectedFile();	
+				selectorArchivos.showOpenDialog(panel);
+				f = selectorArchivos.getSelectedFile();				
 				if ((f == null) || (f.getName().equals(""))) {
 					 JOptionPane.showMessageDialog(textArea, "Nombre de archivo inválido", "Nombre de archivo inválido", JOptionPane.ERROR_MESSAGE);
 				}
@@ -102,13 +103,13 @@ public class TheSerializer extends JFrame {
 					textField.setText(f.getCanonicalPath());
 					try {
 						if(f.isFile() && f.canRead()) {
-							if(f.getCanonicalPath().endsWith(".xml")) {								
+							if(getExtension(f).equals(".xml")) {								
 								String xml = leerXml(f);
 								textArea.setText(xml);
-							}else if(f.getCanonicalPath().endsWith(".obj")) {
+							}else if(getExtension(f).equals(".obj")) {
 								String obj = leerObjetos(f);						
 								textArea.setText(obj);
-							}else if(f.getCanonicalPath().endsWith(".json")) {
+							}else if(getExtension(f).equals(".json")) {
 								String json = leerJson(f);
 								textArea.setText(json);
 							}else {
@@ -154,11 +155,11 @@ public class TheSerializer extends JFrame {
 							if(getExtension(f).equals(".obj")) {
 								faux = ObjetosAJson(f);
 								textArea_1.setText(leerJson(faux));
-								textField.setText(f.getCanonicalPath());
+								textField.setText(faux.getCanonicalPath());
 							}else if(getExtension(f).equals(".xml")) {
 								faux = XmlAJson(f);
 								textArea_1.setText(leerJson(faux));
-								textField.setText(f.getCanonicalPath());
+								textField.setText(faux.getCanonicalPath());
 							}else {
 								JOptionPane.showMessageDialog(textArea, "No se reconoce la extension del archivo", "No se reconoce la extension del archivo", JOptionPane.ERROR_MESSAGE);
 							}
@@ -186,11 +187,11 @@ public class TheSerializer extends JFrame {
 							if(getExtension(f).equals(".obj")) {
 								faux2 = ObjetosAXml(f);
 								textArea_1.setText(leerXml(faux2));
-								textField.setText(f.getCanonicalPath());
+								textField.setText(faux2.getCanonicalPath());
 							}else if(getExtension(f).equals(".json")) {
 								faux2 = JsonAXml(f);
 								textArea_1.setText(leerXml(faux2));
-								textField.setText(f.getCanonicalPath());
+								textField.setText(faux2.getCanonicalPath());
 							}else {
 								JOptionPane.showMessageDialog(textArea, "No se reconoce la extension del archivo", "No se reconoce la extension del archivo", JOptionPane.ERROR_MESSAGE);
 							}	
@@ -204,6 +205,39 @@ public class TheSerializer extends JFrame {
 		btnXml.setBounds(99, 0, 89, 23);
 		panel_1.add(btnXml);
 		
+		JButton btnObjeto = new JButton("Objeto");
+		btnObjeto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnObjeto.setBounds(198, 0, 89, 23);
+		panel_1.add(btnObjeto);
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int sele = JOptionPane.showConfirmDialog(null, "Esta seguro que quiere borrar el archivo: " + f.getName(), "Confirmar borrado", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+				if(sele == 0) {
+					try {
+						File eliminar = new File(f.getCanonicalPath());
+						f= null;
+						System.gc();
+						textField.setText(null);
+						textArea.setText(null); 
+						if(borrarArchivo(eliminar)) {
+							System.out.println("Archivo borrado");
+						}else {
+							System.out.println("No se puede eliminar!");
+						}
+					} catch (IOException e) {						
+						e.printStackTrace();
+					}										
+				}
+			}
+		});
+		btnEliminar.setBounds(475, 0, 89, 23);
+		panel_1.add(btnEliminar);
+		
 		textArea = new JTextArea();
 		textArea.setEditable(false);	
 		JScrollPane scroll = new JScrollPane(textArea);
@@ -216,6 +250,10 @@ public class TheSerializer extends JFrame {
 		scroll_A1.setBounds(10, 239, 564, 161);
 		contentPane.add(scroll_A1);
 	}
+	public static boolean borrarArchivo(File file) {
+		return file.delete();
+	}
+	
 	public static String getExtension(File f) throws IOException {
 		String ext = f.getCanonicalPath();				
 		return ext.substring(ext.lastIndexOf("."), ext.length());
@@ -254,7 +292,7 @@ public class TheSerializer extends JFrame {
 		xmls += "<" + root.getNodeName()+ ">";
 		return xmls;
 	}
-	public static String leerJson(File f) throws FileNotFoundException {
+	public static String leerJson(File f) throws IOException {
 		String jsons = "";
 		java.io.FileInputStream j_in = new FileInputStream(f);
 		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(j_in));
@@ -263,6 +301,9 @@ public class TheSerializer extends JFrame {
 		final List<Empleado> empleados = gson.fromJson(bufferedReader, tipoLista);
 		final String represerntacionJSON = gson.toJson(empleados);
 		jsons = represerntacionJSON;
+		j_in.close();
+		bufferedReader.close();
+		empleados.clear();		
 		return jsons;
 	}
 	public static File ObjetosAXml(File f) throws FileNotFoundException, IOException, ClassNotFoundException, ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
@@ -299,9 +340,22 @@ public class TheSerializer extends JFrame {
 		}
 		Transformer trans = TransformerFactory.newInstance().newTransformer();
 		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new FileOutputStream("archivos/Empleados_o_x.xml"));		
-		trans.transform(source, result);
-		xml = new File("archivos/Empleados_o_x.xml");
+		//seccion para elegir el nombre y ruta del fichero a guardar
+			JFileChooser guardar = new JFileChooser();		
+			guardar.setCurrentDirectory(new File("./archivos"));
+			guardar.setDialogTitle("Guardar");
+			int seleccion = guardar.showSaveDialog(auxPanel);
+			if (seleccion == JFileChooser.APPROVE_OPTION) {
+				xml = guardar.getSelectedFile();
+				guardar.setFileSelectionMode(JFileChooser.FILES_ONLY);			
+				try {				
+					StreamResult result = new StreamResult(new FileOutputStream(xml + ".xml"));
+					trans.transform(source, result);
+					xml = new File(xml + ".xml");       				                 
+		           } catch (IOException exc) {
+		                JOptionPane.showMessageDialog(auxPanel, "Error al guardar el archivo", "Error guardar archivo", JOptionPane.ERROR_MESSAGE);
+		            }		
+				}
 		return xml;
 	}
 	public static File ObjetosAJson(File f) throws FileNotFoundException, IOException, ClassNotFoundException{
@@ -329,19 +383,33 @@ public class TheSerializer extends JFrame {
 		//System.out.println(jsonEmpleados);
 		final Gson gson = new Gson();
 		final java.lang.reflect.Type tipoLista = new TypeToken<List<Empleado>>(){}.getType();
-		final List<Empleado> posts = gson.fromJson(jsonEmpleados, tipoLista);
-		final Writer w_json = new FileWriter("./archivos/Empleados_o_j.json");		
-		final String representacionJSON = gson.toJson(posts);		
-		w_json.write(representacionJSON);		
-		w_json.close();
-		jsons = new File("./archivos/Empleados_o_j.json");
+		final List<Empleado> emp = gson.fromJson(jsonEmpleados, tipoLista);
+		//seccion para elegir el nombre y ruta del fichero a guardar
+			JFileChooser guardar = new JFileChooser();
+			guardar.setCurrentDirectory(new File("./archivos"));
+			guardar.setDialogTitle("Guardar");
+			int seleccion = guardar.showSaveDialog(auxPanel);
+			if (seleccion == JFileChooser.APPROVE_OPTION) {
+				jsons = guardar.getSelectedFile();
+				guardar.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				try {
+					final Writer w_json = new FileWriter(jsons + ".json");		
+					final String representacionJSON = gson.toJson(emp);		
+					w_json.write(representacionJSON);
+					w_json.flush();
+					w_json.close();                    
+                    jsons = new File(jsons + ".json");                   
+                } catch (IOException exc) {
+                    JOptionPane.showMessageDialog(auxPanel, "Error al guardar el archivo", "Error guardar archivo", JOptionPane.ERROR_MESSAGE);
+                }
+			}	
 		return jsons;
 	}
 	public static File XmlAJson(File f) throws SAXException, IOException, ParserConfigurationException {
-		File xml = null;
-        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("./archivos/Empleados_o_x.xml");
+		File json = null;
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(f);
 		
-		final Writer f_out = new FileWriter("./archivos/Empleados_x_j.json");
+		
 		
 		String jsonEmpleados = "";
 		
@@ -362,15 +430,31 @@ public class TheSerializer extends JFrame {
 		final Gson gson = new Gson();
 		final java.lang.reflect.Type tipoLista = new TypeToken<List<Empleado>>(){}.getType();
 		final List<Empleado> emp = gson.fromJson(jsonEmpleados, tipoLista);
-		final String JSON = gson.toJson(emp);
-		f_out.write(JSON);
-		f_out.close();
-		xml = new File("./archivos/Empleados_x_j.json");
-		return xml;
+		//seccion para elegir el nombre y ruta del fichero a guardar
+			JFileChooser guardar = new JFileChooser();
+			guardar.setCurrentDirectory(new File("./archivos"));
+			guardar.setDialogTitle("Guardar");
+			int seleccion = guardar.showSaveDialog(auxPanel);
+			if (seleccion == JFileChooser.APPROVE_OPTION) {
+				json = guardar.getSelectedFile();
+				guardar.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				try {
+					final String JSON = gson.toJson(emp);
+					final Writer f_out = new FileWriter(json + ".json");
+					f_out.write(JSON);
+					f_out.flush();	
+					f_out.close();							                   
+					json = new File(json + ".json");                   
+	            } catch (IOException exc) {
+	                JOptionPane.showMessageDialog(auxPanel, "Error al guardar el archivo", "Error guardar archivo", JOptionPane.ERROR_MESSAGE);
+	            }
+			}
+		
+		return json;
 	}
 	public static File JsonAXml (File f) throws ParserConfigurationException, FileNotFoundException, TransformerFactoryConfigurationError, TransformerException {
-		File json = null;
-		FileInputStream f_in = new FileInputStream("./archivos/Empleados_o_j.json");
+		File xml = null;
+		FileInputStream f_in = new FileInputStream(f);
 		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(f_in));
 
 		Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
@@ -402,9 +486,23 @@ public class TheSerializer extends JFrame {
 		}
 		Transformer trans = TransformerFactory.newInstance().newTransformer();
 		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new FileOutputStream("archivos/Empleados_j_x.xml"));
-		trans.transform(source, result);
-		json = new File("archivos/Empleados_j_x.xml");
-		return json;
+		
+		//seccion para elegir el nombre y ruta del fichero a guardar
+		JFileChooser guardar = new JFileChooser();		
+		guardar.setCurrentDirectory(new File("./archivos"));
+		guardar.setDialogTitle("Guardar");
+		int seleccion = guardar.showSaveDialog(auxPanel);
+		if (seleccion == JFileChooser.APPROVE_OPTION) {
+			xml = guardar.getSelectedFile();
+			guardar.setFileSelectionMode(JFileChooser.FILES_ONLY);			
+			try {				
+				StreamResult result = new StreamResult(new FileOutputStream(xml + ".xml"));
+				trans.transform(source, result);
+				xml = new File(xml + ".xml");       				                 
+            } catch (IOException exc) {
+                JOptionPane.showMessageDialog(auxPanel, "Error al guardar el archivo", "Error guardar archivo", JOptionPane.ERROR_MESSAGE);
+            }
+		}		
+		return xml;
 	}
 }
