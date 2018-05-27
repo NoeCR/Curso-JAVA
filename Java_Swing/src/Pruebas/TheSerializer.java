@@ -1,7 +1,11 @@
 package Pruebas;
 
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -76,8 +80,15 @@ public class TheSerializer extends JFrame {
 	 */
 	public TheSerializer() throws FileNotFoundException, IOException, ClassNotFoundException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("The Serializer!");
-		setBounds(100, 100, 600, 450);
+		setTitle("The Serializer!");			
+		setResizable(false);
+		Toolkit pantalla = Toolkit.getDefaultToolkit();
+		Dimension monitorsize = pantalla.getScreenSize();
+		int height = monitorsize.height;
+		int width = monitorsize.width;
+		setBounds(width/4, height/4, 600, 450);	
+		Image icono = 	pantalla.getImage("src/graficos/Ser.svg");
+		setIconImage(icono);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
