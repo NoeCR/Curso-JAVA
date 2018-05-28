@@ -9,12 +9,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class AddObjetos extends JFrame {
 
@@ -27,8 +31,7 @@ public class AddObjetos extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AddObjetos() {		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public AddObjetos() {
 		Toolkit pantalla = Toolkit.getDefaultToolkit();
 		Dimension monitorsize = pantalla.getScreenSize();
 		int height = monitorsize.height;
@@ -44,12 +47,21 @@ public class AddObjetos extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNombre = new JLabel("Nombre :");
+		JLabel lblNombre = new JLabel("Name :");
 		lblNombre.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblNombre.setBounds(0, 0, 101, 36);
 		panel.add(lblNombre);
 		
 		textField = new JTextField();
+		textField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent arg0) {
+				char c = arg0.getKeyChar();
+				if((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) arg0.consume(); {
+					
+				}
+			}
+		});
 		textField.setBounds(111, 19, 230, 19);
 		panel.add(textField);
 		textField.setColumns(10);
@@ -59,12 +71,19 @@ public class AddObjetos extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblTelfono = new JLabel("Teléfono :");
+		JLabel lblTelfono = new JLabel("Phone :");
 		lblTelfono.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblTelfono.setBounds(0, 0, 101, 36);
 		panel_1.add(lblTelfono);
 		
 		textField_1 = new JTextField();
+		textField_1.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+				if(c < '0' || c > '9') e.consume(); 
+			}
+		});
 		textField_1.setColumns(10);
 		textField_1.setBounds(111, 19, 230, 19);
 		panel_1.add(textField_1);
@@ -74,12 +93,19 @@ public class AddObjetos extends JFrame {
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
-		JLabel lblSueldo = new JLabel("Sueldo : ");
+		JLabel lblSueldo = new JLabel("Salary : ");
 		lblSueldo.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblSueldo.setBounds(0, 0, 101, 36);
 		panel_2.add(lblSueldo);
 		
 		textField_2 = new JTextField();
+		textField_2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c = e.getKeyChar();
+				if(c < 46 || c > '9' || c == 47) e.consume(); 
+			}
+		});
 		textField_2.setColumns(10);
 		textField_2.setBounds(111, 19, 230, 19);
 		panel_2.add(textField_2);
@@ -89,15 +115,16 @@ public class AddObjetos extends JFrame {
 		contentPane.add(panel_3);
 		panel_3.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Añadir");
+		JButton btnNewButton = new JButton("A�adir");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//addEmpleado(textField.getText(),textField_1.getText(),textField_2.getText());
-				empleados.add(new Empleado(textField.getText(), Long.parseLong(textField_1.getText()), Double.parseDouble(textField_2.getText())));
-				TheSerializer.showTemporalObjects(empleados);
-				textField.setText("");
-				textField_1.setText("");
-				textField_2.setText("");
+				if(validation(textField.getText(),textField_1.getText(),textField_2.getText())){
+					empleados.add(new Empleado(textField.getText(), Long.parseLong(textField_1.getText()), Double.parseDouble(textField_2.getText())));
+					TheSerializer.showTemporalObjects(empleados);
+					textField.setText("");
+					textField_1.setText("");
+					textField_2.setText("");
+				}
 			}
 		});
 		btnNewButton.setBounds(125, 12, 107, 25);
@@ -117,6 +144,16 @@ public class AddObjetos extends JFrame {
 		JButton btnNewButton_2 = new JButton("Guardar");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(empleados.size()>0) {
+					try {
+						TheSerializer.leerObjetos(TheSerializer.writeObjects(empleados));
+						empleados.clear();
+					} catch (IOException | ClassNotFoundException e1) {						
+						e1.printStackTrace();
+					}
+				}else {
+					JOptionPane.showMessageDialog(null, "No hay ningun objeto introducido", "No hay ningun objeto introducido", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnNewButton_2.setBounds(244, 12, 97, 25);
@@ -124,9 +161,16 @@ public class AddObjetos extends JFrame {
 		setTitle("Agregar objetos al nuevo fichero");
 		setVisible(true);
 	}
-	private ArrayList<Empleado> addEmpleado(String nombre, String telf, String sueldo){
-		
-		empleados.add(new Empleado(nombre, Long.parseLong(telf), Double.parseDouble(sueldo)));
-		return empleados;
+	public static void resetEmpleados() {
+		empleados.clear();
+	}
+	private boolean validation(String nombre, String tefl, String sueldo) {
+		boolean ok = false;
+		if(nombre.equals("") || tefl.equals("") || sueldo.equals("")) {
+			JOptionPane.showMessageDialog(null, "Por favor rellene todos los campos", "Por favor rellene todos los campos", JOptionPane.INFORMATION_MESSAGE);
+		}else{
+			ok = true;
+		}
+		return ok;
 	}
 }

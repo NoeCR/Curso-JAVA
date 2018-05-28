@@ -140,7 +140,7 @@ public class TheSerializer extends JFrame {
 		select.setBounds(465, 9, 89, 23);
 		panel.add(select);
 		
-		JLabel lblSeleccinArchivo = new JLabel("Selecci\u00F3n File .obj");
+		JLabel lblSeleccinArchivo = new JLabel("Selection File");
 		lblSeleccinArchivo.setBounds(10, 11, 89, 18);
 		panel.add(lblSeleccinArchivo);
 		
@@ -218,7 +218,7 @@ public class TheSerializer extends JFrame {
 		btnXml.setBounds(99, 0, 89, 23);
 		panel_1.add(btnXml);
 		
-		JButton btnObjeto = new JButton("Objeto");
+		JButton btnObjeto = new JButton("Object");
 		btnObjeto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if((f == null) || (f.getName().equals(""))) {
@@ -251,29 +251,35 @@ public class TheSerializer extends JFrame {
 		btnObjeto.setBounds(198, 0, 89, 23);
 		panel_1.add(btnObjeto);
 		
-		JButton btnEliminar = new JButton("Eliminar");
+		JButton btnEliminar = new JButton("Delete");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int sele = JOptionPane.showConfirmDialog(null, "Esta seguro que quiere borrar el archivo: " + f.getName(), "Confirmar borrado", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-				if(sele == 0) {
-					try {
-						File eliminar = new File(f.getCanonicalPath());
-						f= null;
-						System.gc();
-						textField.setText(null);
-						textArea.setText(null); 
-						if(borrarArchivo(eliminar)) {
-							System.out.println("Archivo borrado");
-						}else {
-							System.out.println("No se puede eliminar!");
-						}
-					} catch (IOException e) {						
-						e.printStackTrace();
-					}										
+				if(f!=null) {
+					int sele = JOptionPane.showConfirmDialog(null, "Esta seguro que quiere borrar el archivo: " + f.getName(), "Confirmar borrado", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+					if(sele == 0) {
+						try {
+							File eliminar = new File(f.getCanonicalPath());
+							f= null;
+							System.gc();
+							textField.setText(null);
+							textArea.setText(null); 
+							if(borrarArchivo(eliminar)) {
+								JOptionPane.showMessageDialog(textArea, "Archivo eliminado con exito", "Archivo eliminado con exito", JOptionPane.INFORMATION_MESSAGE);
+							}else {
+								System.out.println("No se puede eliminar!");
+							}
+						}catch (IOException e) {						
+							e.printStackTrace();
+						}										
+					}
+				}else {
+					JOptionPane.showMessageDialog(textArea, "No hay un archivo valido seleccionado", "No hay un archivo valido seleccionado", JOptionPane.ERROR_MESSAGE);
+					textArea.setText(null);
+					AddObjetos.resetEmpleados();
 				}
 			}
 		});
-		btnEliminar.setBounds(466, 0, 98, 23);
+		btnEliminar.setBounds(494, 0, 70, 23);
 		panel_1.add(btnEliminar);
 		
 		JButton btnAdd = new JButton("Add");
@@ -283,8 +289,19 @@ public class TheSerializer extends JFrame {
 				
 			}
 		});
-		btnAdd.setBounds(384, -1, 70, 25);
+		btnAdd.setBounds(414, -1, 70, 24);
 		panel_1.add(btnAdd);
+		
+		JButton btnNewButton_1 = new JButton("Reset");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textField.setText(null);
+				textArea.setText(null);
+				textArea_1.setText(null);				
+			}
+		});
+		btnNewButton_1.setBounds(334, 0, 70, 23);
+		panel_1.add(btnNewButton_1);
 		
 		textArea = new JTextArea();
 		textArea.setEditable(false);	
@@ -618,6 +635,27 @@ public class TheSerializer extends JFrame {
 			sb.append("Nombre: " + e.getNombre() + "\n" + "Teléfono: " + e.getTelf() + "\n" + "Sueldo: " + e.getSueldo() + "\n\n");			
 		}
 		textArea.append(sb.toString());
+	}
+	public static File writeObjects(ArrayList<Empleado> emps) throws FileNotFoundException, IOException {
+		File obj = null;
+		//seccion para elegir el nombre y ruta del fichero a guardar
+		JFileChooser guardar = new JFileChooser();		
+		guardar.setCurrentDirectory(new File("./archivos"));
+		guardar.setDialogTitle("Guardar");
+		int seleccion = guardar.showSaveDialog(auxPanel);
+		if (seleccion == JFileChooser.APPROVE_OPTION) {
+			guardar.setFileSelectionMode(JFileChooser.FILES_ONLY);	
+			obj = guardar.getSelectedFile();
+			obj = new File(obj + ".obj");
+		}		
+		ObjectOutputStream f_out = new ObjectOutputStream(new FileOutputStream(obj));		
+		
+		for(Empleado e : emps) {
+			f_out.writeObject(e);
+		}
+		textArea.setText(null);
+		f_out.close();
+		return obj;
 	}
 }
 
