@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.JTextField"/>
-<fullyQualifiedTypeName name="Sofgest.ImportClients"/>
-<fullyQualifiedTypeName name="Sofgest.Import"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.RichTextString"/>
-<fullyQualifiedTypeName name="javax.xml.bind.TypeConstraintException"/>
 <fullyQualifiedTypeName name="java.io.RandomAccessFile"/>
 <fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
 <fullyQualifiedTypeName name="com.google.gson.reflect.TypeToken"/>
 <fullyQualifiedTypeName name="javax.swing.text.Document"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
 <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
 <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
@@ -34,7 +25,6 @@
 <fullyQualifiedTypeName name="java.io.StringReader"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="java.io.Writer"/>
@@ -42,7 +32,6 @@
 <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
@@ -60,4 +49,15 @@
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="clases.pildoras.ProductosId"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="clases.pildoras.Producto"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
 </qualifiedTypeNameHistroy>

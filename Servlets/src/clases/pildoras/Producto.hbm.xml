@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 25-jun-2018 17:11:21 by Hibernate Tools 5.2.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false">
+    <class catalog="pruebas" dynamic-insert="false" dynamic-update="false" mutable="true" name="clases.pildoras.Producto" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="productos">
+        <id name="codart" type="string">
+            <column length="4" name="codart"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="section" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="section"/>
+        </property>
+        <property generated="never" lazy="false" name="nomart" optimistic-lock="true" type="string" unique="false">
+            <column length="19" name="nomart"/>
+        </property>
+        <property generated="never" lazy="false" name="precio" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="precio" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="fecha" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="fecha"/>
+        </property>
+        <property generated="never" lazy="false" name="importado" optimistic-lock="true" type="string" unique="false">
+            <column length="9" name="importado"/>
+        </property>
+        <property generated="never" lazy="false" name="porig" optimistic-lock="true" type="string" unique="false">
+            <column length="9" name="porig"/>
+        </property>
+        <property generated="never" lazy="false" name="foto" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="foto"/>
+        </property>
+    </class>
+</hibernate-mapping>

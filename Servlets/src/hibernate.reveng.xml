@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="pruebas" match-name="archivos" />
+	<table-filter match-catalog="pruebas" match-name="clientes" />
+	<table-filter match-catalog="pruebas" match-name="pedidos" />
+	<table-filter match-catalog="pruebas" match-name="productos" />
+	<table-filter match-catalog="pruebas" match-name="usuarios_pass" />
+	<table catalog="pruebas" name="archivos" class="clases.pildoras.Archivo">
+		<column name="id"></column>
+		<column name="tipo"></column>
+		<column name="nombre"></column>
+		<column name="contenido"></column>
+	</table>
+	<table catalog="pruebas" name="clientes" class="clases.pildoras.Cliente">
+		<column name="codcli"></column>
+		<column name="pob"></column>
+		<column name="empresa"></column>
+		<column name="dir"></column>
+		<column name="telf"></column>
+		<column name="historial"></column>
+		<column name="responsable"></column>
+	</table>
+	<table catalog="pruebas" name="pedidos" class="clases.pildoras.Pedido">
+		<column name="npedido"></column>
+		<column name="enviado"></column>
+		<column name="fechapedido"></column>
+		<column name="dte"></column>
+		<column name="codcli"></column>
+		<column name="formapago"></column>
+	</table>
+	<table catalog="pruebas" name="productos" class="clases.pildoras.Producto">
+		<column name="codart"></column>
+		<column name="porig"></column>
+		<column name="fecha"></column>
+		<column name="importado"></column>
+		<column name="nomart"></column>
+		<column name="section"></column>
+		<column name="precio"></column>
+		<column name="foto"></column>
+	</table>
+	<table catalog="pruebas" name="usuarios_pass" class="clases.pildoras.Usuario_Pass">
+		<column name="id"></column>
+		<column name="usuario"></column>
+		<column name="password"></column>
+	</table>
+</hibernate-reverse-engineering>
