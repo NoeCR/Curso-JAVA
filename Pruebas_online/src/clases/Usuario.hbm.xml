@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 03-jul-2018 18:56:13 by Hibernate Tools 5.2.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tienda_online" dynamic-insert="false" dynamic-update="false" mutable="true" name="clases.Usuario" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="usuario">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="nick" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="nick" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column name="password" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="nombre" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellidos" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="apellidos" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="150" name="direccion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="cp" optimistic-lock="true" type="int" unique="false">
+            <column name="cp" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="telf" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="telf" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="mail" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="mail" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="admin" optimistic-lock="true" type="boolean" unique="false">
+            <column name="admin" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="facturas" optimistic-lock="true" sort="unsorted" table="factura">
+            <key on-delete="noaction">
+                <column name="id_cliente" not-null="true"/>
+            </key>
+            <one-to-many class="clases.Factura" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

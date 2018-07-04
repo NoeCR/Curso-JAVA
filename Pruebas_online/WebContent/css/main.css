@@ -1,0 +1,153 @@
+@charset "ISO-8859-1";
+.main-header{
+	height: 7em;
+	display: flex;
+	align-content: center;
+    justify-content: space-between;
+    border-top: .38462rem solid #ff6000;
+    border-bottom: .38462rem solid #ff6000;
+}
+.main-header-logo{
+	width: 25%;
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;	
+}
+.logo{
+	width: 55%;
+    margin-left: 15px;
+}
+.main-header-content{
+	width: 75%;
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.form-head-search{
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    width: 30%;
+    height: 100%;
+    padding-top: 4em; 
+}
+.gliph-mod{
+	line-height: 1.5;
+}
+.ul-head-elem{
+	list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-bottom: -.30769rem;  
+}
+.li-head-elem{
+	margin: 10px;
+    padding: 5px;
+    display: flex;
+    max-width: none;
+}
+.head-menu-link{
+	position: relative;
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+    text-align: right;
+    color: #444;
+	text-decoration: none;
+	transition: color 0.1s linear 0.1s;
+}
+.head-menu-link:hover{
+	text-decoration: none;
+	color: #f75316;
+}
+.head-text-menu{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    text-align: right;
+    color: #444;
+    transition: color 0.1s linear 0.1s;
+}
+.head-text-menu:hover{
+	color: #f75316;
+}
+.icon-menu-user{
+	color: #f75316;
+	width: 45px;
+	height: 48px;
+	margin-left: 10px;
+}
+.lnr{
+	font-size: 15px;
+	color: #6d6866;
+	margin: 10px;
+	display: inline-block;
+}
+.icon-menu-cart{
+	width: 45px;
+	height: 45px;
+	margin-left: 10px;
+}
+.row.content {height: 1500px}
+.sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+.left-li-menu{
+	list-style: none;	
+
+ }
+.left-btn-menu{
+	color: #888;
+	padding: 0px 0px;
+	font-size: 15px;
+	background-color: #f1f1f1;
+	border-color: #f1f1f1;
+	width: 110%;
+	margin-left: -25px;
+    margin-top: 3px;
+    text-align: left;
+}
+.left-btn-menu:hover{
+	 background-color: #ccc;
+	 border-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+ }

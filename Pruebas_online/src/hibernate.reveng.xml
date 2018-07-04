@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="tienda_online" match-name="categoria" />
+	<table-filter match-catalog="tienda_online" match-name="detfac" />
+	<table-filter match-catalog="tienda_online" match-name="factura" />
+	<table-filter match-catalog="tienda_online" match-name="producto" />
+	<table-filter match-catalog="tienda_online" match-name="usuario" />
+	<table catalog="tienda_online" name="categoria" class="clases.Categoria">
+		<column name="id"></column>
+		<column name="nombre"></column>
+	</table>
+	<table catalog="tienda_online" name="detfac" class="clases.Detfac">
+		<column name="id"></column>
+		<column name="cantidad"></column>
+		<column name="precio"></column>
+		<column name="total"></column>
+		<column name="id_producto"></column>
+		<column name="id_fac"></column>
+		<column name="dte"></column>
+	</table>
+	<table catalog="tienda_online" name="factura" class="clases.Factura">
+		<column name="id"></column>
+		<column name="id_cliente"></column>
+		<column name="fecha"></column>
+	</table>
+	<table catalog="tienda_online" name="producto" class="clases.Producto">
+		<column name="id"></column>
+		<column name="precio"></column>
+		<column name="descripcion"></column>
+		<column name="nombre"></column>
+		<column name="id_cat"></column>
+		<column name="marca"></column>
+		<column name="stock"></column>
+	</table>
+	<table catalog="tienda_online" name="usuario" class="clases.Usuario">
+		<column name="id"></column>
+		<column name="nombre"></column>
+		<column name="mail"></column>
+		<column name="cp"></column>
+		<column name="admin"></column>
+		<column name="password"></column>
+		<column name="apellidos"></column>
+		<column name="telf"></column>
+		<column name="nick"></column>
+		<column name="direccion"></column>
+	</table>
+</hibernate-reverse-engineering>

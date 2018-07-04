@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 03-jul-2018 18:56:13 by Hibernate Tools 5.2.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tienda_online" dynamic-insert="false" dynamic-update="false" mutable="true" name="clases.Detfac" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="detfac">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="clases.Factura" embed-xml="true" fetch="select" insert="true" name="factura" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_fac" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="clases.Producto" embed-xml="true" fetch="select" insert="true" name="producto" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_producto" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="precio" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="precio" not-null="true" precision="5"/>
+        </property>
+        <property generated="never" lazy="false" name="cantidad" optimistic-lock="true" type="int" unique="false">
+            <column name="cantidad" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="total" optimistic-lock="true" type="big_decimal" unique="false">
+            <column name="total" not-null="true" precision="6"/>
+        </property>
+        <property generated="never" lazy="false" name="dte" optimistic-lock="true" type="int" unique="false">
+            <column name="dte" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

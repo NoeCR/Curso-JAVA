@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 03-jul-2018 18:56:13 by Hibernate Tools 5.2.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="tienda_online" dynamic-insert="false" dynamic-update="false" mutable="true" name="clases.Factura" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="factura">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="clases.Usuario" embed-xml="true" fetch="select" insert="true" name="usuario" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="id_cliente" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="fecha" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="fecha" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="detfacs" optimistic-lock="true" sort="unsorted" table="detfac">
+            <key on-delete="noaction">
+                <column name="id_fac" not-null="true"/>
+            </key>
+            <one-to-many class="clases.Detfac" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
