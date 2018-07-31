@@ -8,7 +8,9 @@
 <item elementID="=Blue JAVA" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517928841571_3" label="EDD" name="EDD"/>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517931081391_4" label="EDD_2ev" name="EDD_2ev"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517931081391_4" label="EDD_2ev" name="EDD_2ev">
+<item elementID="=spring-boot-thymeleaf" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517490767793_0" label="Conjunto de Trabajo de Ventana" name="Aggregate for window 1517490767792"/>
 <mruList name="EDD_2ev"/>
 <mruList name="EDD"/>
