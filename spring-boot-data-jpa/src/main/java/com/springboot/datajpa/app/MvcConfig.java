@@ -1,15 +1,20 @@
 package com.springboot.datajpa.app;
 
+import org.springframework.context.annotation.Bean;
+
 //import java.nio.file.Paths;
 
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 //import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-public class MvcConfig extends WebMvcConfigurerAdapter {
+public class MvcConfig implements WebMvcConfigurer {
 
 	/*private final Logger log = LoggerFactory.getLogger(getClass());
 	
@@ -26,6 +31,20 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		
 	}*/
 
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/error_403").setViewName("error_403");
+	}
 	
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	@Bean
+	public Jaxb2Marshaller Jaxb2Marshaller() {
+		Jaxb2Marshaller marshaller =  new Jaxb2Marshaller();
+		marshaller.setClassesToBeBound(new Class[] {com.springboot.datajpa.app.view.xml.ClienteList.class});
+		return marshaller;
+	}
 }
 
